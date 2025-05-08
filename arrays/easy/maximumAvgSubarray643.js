@@ -1,5 +1,5 @@
 // LeetCode #18: Maximum SubArray of Size K
-// Difficulty: Medium
+// Difficulty: Easy
 // Category: Arrays
 // Approach: Sliding Window
 
