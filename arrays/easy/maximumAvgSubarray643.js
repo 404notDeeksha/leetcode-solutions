@@ -1,4 +1,4 @@
-// LeetCode #18: Maximum SubArray of Size K
+// LeetCode #643: Maximum Avg SubArray of Size K
 // Difficulty: Easy
 // Category: Arrays
 // Approach: Sliding Window

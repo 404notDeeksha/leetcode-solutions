@@ -3,6 +3,13 @@
 // Category: Arrays
 // Approach: Sliding Window & Sets
 
+// # Time Complexity
+// O(n) for the two pointers
+
+// # Space Complexity
+// O(n) for the set
+
+
 var lengthOfLongestSubstring = function(s) {
         let set = new Set();
         let j=0;
@@ -17,3 +24,5 @@ var lengthOfLongestSubstring = function(s) {
         }
         return maxLen;
     };
+
+console.log(lengthOfLongestSubstring("abcabcbb"));
