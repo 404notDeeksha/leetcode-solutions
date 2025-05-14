@@ -28,9 +28,9 @@
  */
 import {
   printLinkedList,
-  ListNode,
+  // ListNode,
   buildLinkedList,
-} from "../../utils/linkedList/create_print_LL";
+} from "../../utils/linkedList/utils";
 
 var reverseList = function (head) {
   let prev = null;
