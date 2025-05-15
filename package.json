@@ -1,0 +1,20 @@
+{
+  "name": "leetcode-solutions",
+  "version": "1.0.0",
+  "description": "documenting all my leetcode problems, with approach",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/404notDeeksha/leetcode-solutions.git"
+  },
+  "type":"module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/404notDeeksha/leetcode-solutions/issues"
+  },
+  "homepage": "https://github.com/404notDeeksha/leetcode-solutions#readme"
+}
