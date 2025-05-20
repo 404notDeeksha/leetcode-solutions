@@ -72,3 +72,8 @@ console.log(
     [20, 25],
   ])
 ); // 2
+
+
+// Optimized approach: using minHeap
+
+//Intuition

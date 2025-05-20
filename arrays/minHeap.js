@@ -1,4 +1,4 @@
-function createMinHeap() {
+export function createMinHeap() {
     const heap = [];
   
     function getParentIndex(i) {
