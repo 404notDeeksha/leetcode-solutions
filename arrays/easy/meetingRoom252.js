@@ -9,7 +9,7 @@
 
 // Complexity:
 // Time complexity: O(n log n) for sorting + O(n) for checking overlaps = O(n log n)
-// Space complexity: O(n) for the merged array (if no overlapping intervals case)
+// Space complexity: O(1) 
 /**
  * @param {number[][]} intervals
  * @return {boolean}
@@ -20,15 +20,8 @@ var canAttendMeetings = function(intervals) {
 
     intervals.sort((a,b)=> a[0]-b[0]);
 
-    let merged = [intervals[0]];
-
     for(let i=1;i<intervals.length ; i++){
-        let curr = intervals[i];
-        let last = merged[merged.length-1];
-        
-        if(last[1]>curr[0]) return false;
-        else merged.push(curr);
-
+        if(intervals[i-1][1]>intervals[i][0]) return false;
     }
     return true;
 };
