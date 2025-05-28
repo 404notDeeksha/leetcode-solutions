@@ -12,6 +12,9 @@
 // - Use a variable to keep track of the minimum length of the subarray
 // - Use a variable to keep track of the starting index of the subarray
 // - Use a variable to keep track of the ending index of the subarray
+// - We will iterate through array, & calculate sum with each new element.
+// - If sum becomes greater or equal to target, we will capture subsequent min subarray length.
+// - we will iterate until sum again becomes less than target , incrementing starting index of subarray subsequently.
 // - return the length of the subarray
 
 // # Complexity
@@ -48,4 +51,5 @@ var minSubArrayLen = function(target, nums) {
 };
 
 
+console.log(minSubArrayLen(11,[1,2,3,4,5]));
 console.log(minSubArrayLen(11,[1,2,3,4,5]));
