@@ -7,11 +7,10 @@
 // max sum of size k has to be tracked
 
 // # Approach
-// - Use two pointers to find the maximum sum of size k
-// - Use a variable to keep track of the starting index of the subarray
-// - Use a variable to keep track of the ending index of the subarray
-// - Use a variable to keep track of the maximum sum
-// - return the maximum sum
+// - Evaluate sum of first k elements of array.
+// - Assign sum to max value.
+// - Iterate through rest of array & evaluate subsequent sum of k elements gradually by adding a new element & removing starting element of array.
+// - get max value out of all sum values.
 
 // # Complexity
 // - Time complexity:
