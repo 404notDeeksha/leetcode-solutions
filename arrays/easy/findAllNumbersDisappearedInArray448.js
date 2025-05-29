@@ -8,12 +8,12 @@
 
 // # Approach
 // - Sort the array
-// - Use two pointers to track the numbers
+// - Use two pointers to track the numbers.
 // - The first pointer will track the current number
-// - The second pointer will track the range of numbers from 1 to n
+// - The second pointer will track the consecutive range of numbers from 1 to n
 // - If the first pointer is equal to the second pointer, move both pointers forward
-// - If the first pointer is greater than the second pointer, add the second pointer to the result array and move the second pointer forward
-// - If the first pointer is less than the second pointer, move the first pointer forward
+// - If the first pointer is greater than the second pointer, means array has missing elements .add the second pointer to the result array and move the second pointer forward.
+// - If the first pointer is less than the second pointer, move the first pointer forward.
 // - After the first pointer reaches the end of the array, add the remaining numbers from the second pointer to the result array
 // - Return the result array
 
@@ -55,6 +55,10 @@ console.log(findDisappearedNumbers([1,1]));
 
 //optimum approach
 
+// Intuition
+// - Mark all the nos which are present wrto indexes in array as -ve form of the number.
+// - result will have indexes whose elements are positive. 
+
 // # Complexity
 // - Time complexity:
 // - O(n) for the two pointers
@@ -65,7 +69,7 @@ console.log(findDisappearedNumbers([1,1]));
 
 // # Code
 // javascript []
-var findDisappearedNumbers = function(nums) {
+var findDisappearedNumbersO = function(nums) {
     let n=nums.length;
     let arr=[];
     for(let i=0;i<n;i++){
@@ -81,4 +85,4 @@ var findDisappearedNumbers = function(nums) {
     }
     return arr;  
 };
-
+console.log(findDisappearedNumbersO([4,3,2,7,8,2,3,1]));
