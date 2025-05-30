@@ -11,10 +11,11 @@
 
 // # Approach
 // - Use two pointers to find the product of the subarray
-// - Use a variable to keep track of the product of the subarray
-// - Use a variable to keep track of the starting index of the subarray
-// - Use a variable to keep track of the ending index of the subarray
-// - Use a variable to keep track of the number of subarrays
+// - We iterate over entire array using one pointer.
+// - We count no. of such subarrays by right-left +1;
+// - When product of a subarray elements becomes >= k, we reduce product value by removing start element from subarray. & updating next element as firsty element of subarray.
+// - we iterate untill last element of array is reached.
+// - We return count;
 
 // # Complexity
 
@@ -47,3 +48,4 @@ var numSubarrayProductLessThanK = function(nums, k) {
     };
 
 console.log(numSubarrayProductLessThanK([10,5,2,6],100));
+
