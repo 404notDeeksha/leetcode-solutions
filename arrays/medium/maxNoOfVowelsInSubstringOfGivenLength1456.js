@@ -8,23 +8,20 @@
 // - The substring has to have the maximum number of vowels
 
 // #Approach
-// - Use two pointers to find the maximum number of vowels in the substring
-// - Use a variable to keep track of the number of vowels in the substring
-// - Use a variable to keep track of the starting index of the substring
-// - Use a variable to keep track of the ending index of the substring
-// - Use a variable to keep track of the maximum number of vowels in the substring
-// - Use a variable to keep track of the length of the substring
-// - Use a variable to keep track of the number of vowels in the substring
+// - Initialise a set of vowels.
+// - Iterate over string.
+// - if element in string is present already in set, increment count.
+// - when iteration goes over k & start element of substring [j-k] is present in set, decrement count.
+// - Use a variable to count max out of all substrings.
+// - Return max;
 
 // #Complexity
 // - Time complexity:
 // - O(n) for the two pointers
 // - Space complexity:
-// - O(1) for the variables
+// - O(n) for the set
 // #Code
 //javascript []
-
-//Revisit: Yes
 
 /**
  * @param {string} s
@@ -41,3 +38,7 @@ var maxVowels = function(s, k) {
     }
     return maxCount;
 };
+
+console.log(maxVowels("abciiidef",3)); //3
+console.log(maxVowels("aeiou",2)); //2
+console.log(maxVowels("a",1)); //1
