@@ -3,6 +3,11 @@
 Hey there! 👋  
 Welcome to my repository where I’m solving and documenting 50+ LeetCode problems focused on essential patterns and arrays, all in JavaScript.
 
+## 📊 My LeetCode Profile
+
+Check out my LeetCode activity and stats:  
+[Deeksha14](https://leetcode.com/u/Deeksha14/)
+
 ---
 
 ## 🚀 About This Repo
