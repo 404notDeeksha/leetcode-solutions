@@ -11,3 +11,12 @@ The first node is called the **head**, and the last node points to `null`, indic
 - **Singly Linked List**: Each node points to the next node.
 - **Doubly Linked List**: Each node points to both the next and previous nodes.
 - **Circular Linked List**: The last node points back to the head, forming a circle.
+
+### Key Differences: Linked Lists vs Arrays
+
+| Feature                | Arrays                   | Linked Lists             |
+|------------------------|--------------------------|--------------------------|
+| Memory allocation      | Contiguous, fixed size   | Non-contiguous, dynamic  |
+| Direct access          | Yes (random access)      | No (sequential access)   |
+| Insert/Delete          | Costly (need shifting)   | Efficient (update links) |
+| Extra memory           | No (just data)           | Yes (data + pointer)     |
