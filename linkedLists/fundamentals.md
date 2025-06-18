@@ -45,3 +45,9 @@ Most common problems and patterns you’ll encounter:
 - **Cloning a linked list with random pointers**: Create a deep copy of a complex linked list structure.
 - **Sorting a linked list**: Implement merge sort or insertion sort on linked lists.
 - **Folding a linked list**: Rearranging nodes in a specific order (e.g., first, last, second, second last, etc.).
+
+### Problem-Solving Patterns
+
+- **Two-pointer technique**: Used for finding middle, detecting cycles, and merging lists.
+- **Dummy node usage**: Simplifies edge cases when manipulating the head node.
+- **Reversal and splitting**: For palindrome checks, folding, and other rearrangement tasks.
