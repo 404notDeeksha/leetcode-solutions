@@ -31,3 +31,17 @@ Linked lists are widely used in scenarios where dynamic memory allocation and ef
 - **Undo/Redo functionality**: In editors, where each action is a node in a linked list.
 - **Memory management**: Keeping track of free memory blocks.
 - **Implementation of stacks and queues**: Linked lists allow dynamic sizing for these structures.
+
+## Common Linked List Problems & Patterns
+
+Most common problems and patterns you’ll encounter:
+
+- **Reversal of a linked list**: Reverse the order of nodes (iterative or recursive).
+- **Finding the middle node**: Use slow and fast pointers to locate the center.
+- **Detecting cycles**: Use Floyd’s Cycle Detection Algorithm (tortoise and hare).
+- **Merging two sorted lists**: Merge two sorted linked lists into one sorted list.
+- **Palindrome check**: Check if the linked list reads the same forwards and backwards (often involves reversing part of the list).
+- **Removing nth node from end**: Use two pointers with a fixed gap.
+- **Cloning a linked list with random pointers**: Create a deep copy of a complex linked list structure.
+- **Sorting a linked list**: Implement merge sort or insertion sort on linked lists.
+- **Folding a linked list**: Rearranging nodes in a specific order (e.g., first, last, second, second last, etc.).
