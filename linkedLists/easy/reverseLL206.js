@@ -28,7 +28,6 @@
  */
 import {
   printLinkedList,
-  // ListNode,
   buildLinkedList,
 } from "../../utils/linkedList/utils";
 

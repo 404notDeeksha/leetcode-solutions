@@ -1,3 +1,9 @@
+// Defining ListNode Constructor function
+export const ListNode = function(val, next) {
+    this.val = (val===undefined ? 0 : val)
+    this.next = (next===undefined ? null : next)
+}
+
 export const buildLinkedList = (arr)=>{
     if (arr.length === 0) return null;
 
@@ -20,7 +26,4 @@ export const printLinkedList = (head) => {
     console.log(result.join(" -> "));
 }
 
-export const ListNode = function(val, next) {
-    this.val = (val===undefined ? 0 : val)
-    this.next = (next===undefined ? null : next)
-}
+
