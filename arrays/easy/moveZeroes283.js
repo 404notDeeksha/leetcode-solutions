@@ -4,9 +4,8 @@
 
 // Intuition:
 // We can use the two pointers approach to solve this problem.
-// we will iterate through the array and keep track of the last zero element.
-// When we encounter a non-zero element, we will swap it with the last zero element.
-
+// we will iterate through the array and keep track of the first zero element.
+// When we encounter a non-zero element, we will swap it with the first zero element.
 // This way, we will move all the zero elements to the end of the array while maintaining the order of the non-zero elements.
 
 // Complexity:
@@ -31,3 +30,4 @@ return nums;
 }
 
 console.log(moveZeroes([0,1,0,3,12])); // [1,3,12,0,0]
+console.log(moveZeroes([0])); // [0]
