@@ -23,7 +23,6 @@
 
 // # Code
 // javascript []
-
 /**
  * @param {number[]} nums
  * @param {number} k

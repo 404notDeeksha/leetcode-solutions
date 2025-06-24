@@ -4,7 +4,7 @@
 
 // Intuition:
 // Since the array is sorted, we can use two pointers to keep track of unique elements.
-// The first pointer will iterate through the array, and the second pointer will keep track of the position to insert the next unique element.
+// The first pointer(i) will keep track of position to insert unique element. the second pointer(j) will trace array.
 
 //Complexity:
 // Time Complexity: O(n), where n is the length of the array.
