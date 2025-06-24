@@ -1,0 +1,1 @@
+console.log("Large Array", twoSum(Array.from({length: 100000}, (_, i) => i + 1), 100001)); 
