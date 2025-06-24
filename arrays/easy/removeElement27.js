@@ -19,17 +19,11 @@
  */
 var removeElement = function(nums, val) {
     let i=0;
-    let j=0;
-    let pos=false;
-    while(j<nums.length){
-        if(nums[j] == val) {
-           pos=true;
-        }else
-        {
-            if(pos) nums[i]=nums[j];
-            i++;}
-        j++;
-        
+    for(let j=0; j<nums.length; j++){
+        if(nums[j] !== val) {
+            nums[i]=nums[j];
+            i++;
+        }      
     }
     return i;
 };
