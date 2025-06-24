@@ -30,8 +30,8 @@
  * @return {number}
  */
 var findMaxAverage = function(nums, k) {
-    let i=0; let sum=0;
-    for(let j=i;j<k;j++){
+    let sum=0;
+    for(let j=0;j<k;j++){
         sum=sum+nums[j];
      }
      let maxSum=sum;
@@ -41,4 +41,5 @@ var findMaxAverage = function(nums, k) {
     }
     return maxSum/k;
 };
-console.log(findMaxAverage([5],1));
+console.log(findMaxAverage([5],1)); //5
+console.log(findMaxAverage([1,12,-5,-6,50,3],4)); // 12.75
