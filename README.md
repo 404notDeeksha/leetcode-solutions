@@ -67,7 +67,7 @@ Feedback, suggestions, and discussions are always welcome.
 
 ## Mistakes I made while attempting DSA: 
 
-- [LEARNING.md](learnings)
+- [Learning](LEARNING.md)
 
 ---
 
