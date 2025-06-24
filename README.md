@@ -65,6 +65,12 @@ Feedback, suggestions, and discussions are always welcome.
 
 ---
 
+## Mistakes I made while attempting DSA: [LEARNING.md](LEARNING.md)
+
+- Read Question wrong. (assumed that question asks subarray)
+
+---
+
 ## 📣 Let’s Connect
 
 If you want to chat about solutions, algorithms, or JavaScript tricks, feel free to reach out or open an issue.  
