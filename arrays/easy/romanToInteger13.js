@@ -8,8 +8,8 @@
  */
 
 // Intuition:
-// create map of Roman Numerals.
-// Iterate via string. 
+// Create a map of Roman Numerals.
+// Iterate the string. 
 // Check if string has more than one character & if next character is greater than current one, subtract current from total.
 // else add current to total.
 
@@ -27,7 +27,8 @@ var romanToInt = function(s) {
      'D':500,
      'M':1000,
     }
-    let number=0; let j=-1;
+    let number=0;
+    let j=-1;
     for(let index=0; index<s.length; index++){
          if(index<s.length-1 && map[s[index]]<map[s[index+1]]){            
              number-=map[s[index]];
