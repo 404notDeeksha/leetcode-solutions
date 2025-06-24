@@ -65,9 +65,9 @@ Feedback, suggestions, and discussions are always welcome.
 
 ---
 
-## Mistakes I made while attempting DSA: [LEARNING.md](LEARNING.md)
+## Mistakes I made while attempting DSA: 
 
-- Read Question wrong. (assumed that question asks subarray)
+- [LEARNING.md](learnings)
 
 ---
 
