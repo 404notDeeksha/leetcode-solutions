@@ -1,7 +1,7 @@
-//leetcode 202
+// Leetcode 202
 // Difficulty: Easy
 // Category: Arrays
-// Approach - Slow and Fast Pointer
+// Approach - Floyd's Cycle Detection Algorithm (Slow and Fast Pointer)
 
 // # Intuition
 // A happy number is a number which eventually reaches 1 when replaced by the sum of the square of each digit.
@@ -17,12 +17,13 @@
 // - This approach does not use extra space for HashSet
 // - This approach is more efficient than the HashSet approach
 
-//Complexity
-// - Time complexity: O(logn)
+// # Complexity
+// - Time complexity: O(logn) as sumSqDigits1 will take O(logn) time to calculate the sum of the square of each digit. 
 // - Space complexity: O(1)
+
+
 // # Code
 // javascript []
-
 /**
  * @param {number} n
  * @return {boolean}
@@ -47,6 +48,10 @@ const sumSqDigits1=(n)=>{
     }
     return sum;
 }
+
+console.lof("Happy Number Approach 1: Slow and Fast Pointer");
+console.log(isHappy(19)); // true
+
 
 // # Approach
 // - Use a HashSet to keep track of the numbers we have seen
