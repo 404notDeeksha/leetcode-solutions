@@ -2,6 +2,8 @@
 // Difficulty: Easy
 // Approach : prefix Sum 
 
+//Question explanation - a biker starts at altitude 0 & goes through net altitude changes given in gain array. Find max altitude location it reached.
+
 // Approach:
 // 1. Initialize a variable `sum` to 0 to keep track of the current altitude.
 // 2. Initialize a variable `max` to 0 to keep track of the maximum altitude.
