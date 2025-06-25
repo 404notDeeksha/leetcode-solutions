@@ -1,10 +1,10 @@
 // LeetCode #18:  4Sum
 // Difficulty: Medium
 // Category: Arrays
-// Approach: Two Pointers
+// Approach: Two Pointers + sorting
 
-// # Intuition
-// it is similiar to 2sum & 3sum problem.
+// # Approach
+// it is similiar to 3sum problem exactly .
 
 // # Approach
 // - Sort the array
@@ -34,37 +34,30 @@
  * @return {number[][]}
 **/
 
-function foursum(arr,target){
-    let n=arr.length;
-    let result=[];
-    arr.sort((a,b)=>a-b);
-    
-    for(let i=0;i<n-3;i++){
-      if(i>0 && arr[i]===arr[i-1]){continue;}
-      for(let j=i+1;j<n-2;j++){
-        if(j>i+1 && arr[j]===arr[j-1]){continue;}
-        
-       let sum1=arr[i]+arr[j];
-       let l=j+1;
-       let r=n-1;
-       
-      while(l<r){
-      let sum2=arr[l]+arr[r];
-      if((sum1+sum2)===target){
-      result.push([arr[i],arr[j],arr[l],arr[r]]);
-     
-      while(l<r && arr[l]===arr[l+1]){l++;}
-      while(l<r && arr[r]===arr[r-1]){r--;}
-      
-      l++;
-      r--;
+var fourSum = function(nums, target) {
+  nums.sort((a,b)=> a-b);
+  let result=[];
+  for(let i=0;i<nums.length-3; i++){
+      if(i>0 && nums[i]=== nums[i-1]){ continue;}
+      for(let j=i+1; j<nums.length-2; j++){
+          if(j>i+1 && nums[j]=== nums[j-1]){ continue;}
+
+          let left = j+1;
+          let right = nums.length-1;
+
+          while(left<right){
+              let sum = nums[i]+nums[j]+nums[left]+nums[right];
+              if(sum === target){
+                  result.push([nums[i],nums[j],nums[left],nums[right]]);
+
+                  while(left<right && nums[left]===nums[left+1]){ left++;}
+                  while(left<right && nums[right]===nums[right-1]){ right--;}
+              }
+              if(sum<target){left++;}
+              else {right--;}
+          } 
       }
-      else
-      if((sum1+sum2)<target){
-        l++;}
-        else {r--;}
-     
-    }}}
-    return result;
   }
+  return result;
+};
   console.log(foursum([1,0,-1,0,-2,2],0));
