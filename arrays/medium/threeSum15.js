@@ -1,13 +1,15 @@
 // LeetCode Problem 15: 3Sum
 // Difficulty: Medium
-// Approach: Two Pointers
+// Implementation: Two Pointers + Sorting
 
-// Intuition:
+// Approach:
 // We can use the two pointers approach to solve this problem.
 // First, we sort the array to make it easier to find triplets that sum to zero.
-// Then, we can iterate through the array and for each element, we can use two pointers to find pairs such that total sum is zero.
-// We can start with one pointer at the next element and the other pointer at the end of the array.
-// If the sum of the three elements is zero, we can add the triplet to the result.
+// Then, we can iterate through the array and for each element, we can use two pointers left, right to find pairs such that total sum is zero.
+// We start with one pointer at the next element and the other pointer at the end of the array.
+// To check duplicates, we can skip the element which is same as previous element.
+// If the sum of the three elements is zero, we can add the triplet to the result. 
+// To avoid duplicates in result, we can check if next (left+1) or previous (right-1) are same as current left or right elements. Skip them if they are the same.
 // If the sum is less than zero, we can move the left pointer to the right to increase the sum.
 // If the sum is greater than zero, we can move the right pointer to the left to decrease the sum.
 
@@ -24,26 +26,34 @@ var threeSum = function(nums) {
     nums.sort((a,b)=>a-b);
     let res=[];
     
-    for(let k=0;k<nums.length-2;k++){
-         if (k > 0 && nums[k] === nums[k - 1]) continue;
-        let i=k+1;
-        let j=nums.length-1;        
-        while(i<j){
-            let sum=nums[i]+nums[j]+nums[k];
+    for(let i=0;i<nums.length-2;i++){
+         if (i > 0 && nums[i] === nums[i - 1]) continue;
+
+        let left=i+1;
+        let right=nums.length-1;        
+        while(left<right){
+            let sum = nums[left]+nums[right]+nums[i];
             if(sum === 0) {
-                res.push([nums[k],nums[i],nums[j]]);
-                while(nums[i]== nums[i+1]) i++;
-                while(nums[j]== nums[j-1]) j--;
-                i++;
-                j--;
+                res.push([nums[i],nums[left],nums[right]]);
+
+                while(nums[left]== nums[left+1]) left++;
+                while(nums[right]== nums[right-1]) right--;
+
+                left++;
+                right--;
             }
             else if(sum<0){i++;}
-            else{j--;}
+            else{right--;}
 
             }
         }
         return res;
 };
 
-console.log(threeSum([-1,0,1,2,-1,-4])); // Output: [[-1,-1,2],[-1,0,1]]
-console.log(threeSum([0,1,1])); // Output: []
+console.log("Multiple Duplicates",threeSum([-1,0,1,2,2,-1,,-4,-4])); // Output: [[-1,-1,2],[-1,0,1]]
+console.log("No result",threeSum([0,1,1])); // Output: []
+console.log("All zeroes",threeSum([0,0,0,0])); // Output: [[0,0,0]]
+console.log("All negative numbers",threeSum([-4,-2,-1])); // Output: []
+console.log("Less than 3 elements",threeSum([1,2])); // Output: []
+console.log("Empty array",threeSum([])); // Output: []
+console.log("Negative & Positive Extremes", threeSum([-1000000, 1000000, 0])); // Output: [[-1000000, 0, 1000000]]
