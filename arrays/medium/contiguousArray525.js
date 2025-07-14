@@ -12,6 +12,9 @@
 // If we find the same prefix sum again, it means the subarray between the two indices has sum 0.
 // We can calculate the length of this subarray and update the maximum length if it is greater than the previous maximum length.
 
+//Complexity:
+// Time: O(n), where n is the length of the input array.
+// Space: O(n), for the hashmap to store prefix sums and their indices.
 /**
  * @param {number[]} nums
  * @return {number}
