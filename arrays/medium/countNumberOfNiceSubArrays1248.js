@@ -1,11 +1,12 @@
 // Leetcode 1248. Count Number of Nice Subarrays
 // Difficulty: Medium
-// Approach: HashMap
+// Approach: prefix sum + HashMap
+
 // Intuition:
 // Given an array of integers, we need to find the number of nice subarrays.
 // A nice subarray is defined as an array that contains exactly k odd numbers.
 // We can use a hashmap to solve this problem.
-// We will iterate through the array and for each element, we will check if the number of odd numbers in the subarray is equal to k.
+// We will iterate through the array and for each element, we will check if the number of odd   numbers in the subarray is equal to k.
 // If it is, we will increment the count.
 // If it is not, we will add the element to the hashmap along with its index.
 
