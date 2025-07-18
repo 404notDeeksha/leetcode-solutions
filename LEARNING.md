@@ -23,3 +23,8 @@ const isAlphaNum = (char) => {
 // A-Z: [65 to 90]
 // char.charCodeAt(0) gives code value of char
 ```
+
+**CASES TO CHECKOUT SORTING**
+
+-Best sorting algo can be under O(nlogn) complexity only.
+- To achieve lower than this, increase Space Complexity.

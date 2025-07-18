@@ -17,6 +17,28 @@
 // Time Complexity: O(n)
 // Space Complexity: O(n)
 
+//Tried myself
+
+var sortedSquares = function(nums) { 
+    let left=0;
+    let right=nums.length-1;
+      let arr = new Array(nums.length-1).fill(0);
+      let k=right;
+    while(left<=right){
+        let leftSq = Math.pow(nums[left],2);
+        let rightSq = Math.pow(nums[right],2);
+        if( leftSq <= rightSq ){
+            arr[k]=rightSq;
+            right--;
+        }else{
+            arr[k]= leftSq;
+            left++;
+        }
+        k--;
+    }
+return arr;
+};
+
 
 var sortedSquares = function(nums) {
     let left=0;
