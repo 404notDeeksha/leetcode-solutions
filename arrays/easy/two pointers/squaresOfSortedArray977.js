@@ -7,7 +7,7 @@
 //Intuition:
 // In order to have only O(n) time complexity, we will have to do squaring & sorting in single iteration.
 // We can have two pointers, left & right, pointing to start & end of the array.
-// We will create a new array to sequentially store the values in sorted order, and a pointer index which will point to the last index of the array.
+// We will create a new array to sequentially store the values in sorted order, and a pointer index which will point to the last index of the new array.
 // We will iterate through the array & compare squares of left & right pointer elements.
 // The Larger square will be stored in new array at index pointer, and pointer shall be decremented.
 // Whichever pointer gave the larger square will either be incremented (if left pointer) or decremented (if right pointer).
@@ -17,8 +17,7 @@
 // Time Complexity: O(n)
 // Space Complexity: O(n)
 
-//Tried myself
-
+//Tried whole myself
 var sortedSquares = function(nums) { 
     let left=0;
     let right=nums.length-1;
@@ -39,7 +38,7 @@ var sortedSquares = function(nums) {
 return arr;
 };
 
-
+//Tried-failed-updated
 var sortedSquares = function(nums) {
     let left=0;
     let right = nums.length-1;
@@ -62,6 +61,7 @@ var sortedSquares = function(nums) {
     return result;
 };
 
+// Not Optimised
 //Time Complexity: O(nlogn)
 // Space Complexity: O(n)
 

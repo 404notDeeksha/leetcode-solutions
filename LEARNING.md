@@ -7,6 +7,7 @@
 
 **CASES TO CHECKOUT ALPHANUMERIC CHARACTERS**
 
+<!-- Q.  -->
 -use regex to check individual character.
 -or replace non-alphanumeric char with blank char.
 - or to SKIP REGEX, use ASCII codes.
@@ -26,5 +27,6 @@ const isAlphaNum = (char) => {
 
 **CASES TO CHECKOUT SORTING**
 
+<!-- Q.977 -->
 -Best sorting algo can be under O(nlogn) complexity only.
 - To achieve lower than this, increase Space Complexity.
