@@ -5,7 +5,7 @@
 
 // # Intuition
 // Find duplicate number in an array of n integers where each integer is between 1 and n (inclusive).
-// The array contains n+1 integers, so there is at least one duplicate number.
+// The array contains n+1 integers,  so there is at least one duplicate number.
 
 // # Approach
 // - Use the fact that the numbers are in the range [1, n]

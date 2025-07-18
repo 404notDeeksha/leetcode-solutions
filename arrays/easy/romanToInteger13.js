@@ -2,10 +2,7 @@
 // Difficulty: Easy
 // Approach: Map + Iteration
 
-/**
- * @param {string} s
- * @return {number}
- */
+
 
 // Intuition:
 // Create a map of Roman Numerals.
@@ -16,6 +13,11 @@
 // Complexity:
 // Time complexity: O(n) where n is the length of the string.
 // Space complexity: O(1) since we are using a fixed-size map.
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
 
 var romanToInt = function(s) {
     let map={
