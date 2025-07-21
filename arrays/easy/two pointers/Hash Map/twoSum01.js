@@ -1,6 +1,7 @@
 // Leetcode 1. Two Sum
 // Difficulty: Easy
-// Implementation: HashMap 
+// Implementation: HashMap + Two pointer
+
 
 // Approach:
 // Given an array of integers, we need to find two numbers such that they add up to a specific target.

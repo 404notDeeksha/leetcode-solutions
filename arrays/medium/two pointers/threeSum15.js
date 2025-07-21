@@ -17,37 +17,42 @@
 // Time Complexity: O(n^2), where n is the length of the input array. nlog(n) for sorting and O(n) for the two-pointer traversal.   
 // Space Complexity: O(1), since we are not using any extra space for the result array, we are just returning the result.
 
+// Tricks to understand:
+    //index is not needed
+    // sum = 0
+    // it will atleast take n2 complexity
+    // skipping same numbers, use continue. dont use while loop inside for loop. let for loop do the iteration work
+    // dont skip left if nums[left] & nums[i] are same.
+    // skip left or right after checking valid pairs
 
-/**
- * @param {number[]} nums
- * @return {number[][]}
- */
 var threeSum = function(nums) {
-    nums.sort((a,b)=>a-b);
-    let res=[];
     
-    for(let i=0;i<nums.length-2;i++){
-         if (i > 0 && nums[i] === nums[i - 1]) continue;
-
-        let left=i+1;
-        let right=nums.length-1;        
+    nums.sort((a,b)=> a-b);
+    let result=[];
+    for (let i=0; i<nums.length-2 ; i++){
+        if(i>0 && nums[i]=== nums[i-1]){continue;}
+        let left= i+1;
+        let right = nums.length-1;
         while(left<right){
-            let sum = nums[left]+nums[right]+nums[i];
-            if(sum === 0) {
-                res.push([nums[i],nums[left],nums[right]]);
+            let sum=nums[i]+nums[left]+nums[right];
 
-                while(nums[left]== nums[left+1]) left++;
-                while(nums[right]== nums[right-1]) right--;
-
+            if(sum===0){
+                result.push([nums[i],nums[left],nums[right]]);
                 left++;
                 right--;
-            }
-            else if(sum<0){i++;}
-            else{right--;}
 
+                while(left < right && nums[left] === nums[left-1]){left++;}
+                while(left < right && nums[right] === nums[right+1]){right--;}
+
+            } else 
+            if(sum<0){
+               left++;         
+            }else{
+                right--;
             }
-        }
-        return res;
+        }        
+    }
+    return result;
 };
 
 console.log("Multiple Duplicates",threeSum([-1,0,1,2,2,-1,,-4,-4])); // Output: [[-1,-1,2],[-1,0,1]]
