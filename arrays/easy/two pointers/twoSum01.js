@@ -8,6 +8,7 @@
 // We will iterate through the array and for each element, we will check if the target - element exists in the hashmap.
 // If it exists, we have found the two numbers and we can return their indices.
 // If it does not exist, we will add the element to the hashmap along with its index.
+// If no favorable indices are found, we shall return an empty array.
 
 // Complexity:
 // Time complexity: O(n)
@@ -39,8 +40,6 @@ console.log("No Solution",twoSum([1,2,3], 7)); // []
 console.log("Zeroes",twoSum([0,4,3,0],0)); // [0,3]
 console.log("Single Element",twoSum([1], 1)); // []
 console.log("Floating Point Numbers",twoSum([1.5, 2.5, 3.5], 4)); // [0,1]
-
-
 
 // Test Cases:
 console.log(twoSum([2,7,11,15],9)); // [0,1]
