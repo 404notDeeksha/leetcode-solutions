@@ -1,7 +1,7 @@
 // LeetCode #1876. Substrings of Size Three with Distinct Characters
 // Difficulty: Easy
 // Category: Arrays
-// Approach: Two Pointers & sets
+// Approach: Sliding Window
 
 // More Optimum & easier Approach
 //  Complexity: O(n) & Space: O(1)
@@ -51,7 +51,8 @@ console.log(
   countGoodSubstrings("a!B@")
 ); //2
 
-// Appraoch :
+// 2nd Appraoch :
+
 // we will iterate over the String & will add every new element of string to a set.
 // We will check if set already doesnt have same element present, if yes, we will delete all elements in set from left, till element duplication is eliminated.
 // We will do this by comparing char of string from left, by tracking string from left.
@@ -59,11 +60,6 @@ console.log(
 // return count.
 
 //Complexity: O(n) & Space: O(n)
-
-/**
- * @param {string} s
- * @return {number}
- */
 
 var countGoodSubstrings1 = function (s) {
   let set = new Set();
