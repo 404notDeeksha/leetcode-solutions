@@ -2,9 +2,12 @@
 // Difficulty: Easy
 // Approach: Two Pointers
 
+//Trick:
+// focus on assigning non-val elements rather than val elements
+
 // Intuition:
-// We can use two pointers to keep track of the position to insert the next element that is not equal to val.
-// The first pointer will iterate through the array, and the second pointer will keep track of the position to insert the next element that is not equal to val.
+// We can use two pointers to keep track of element that is not equal to val & track index to put it in.
+// The first pointer will iterate through the array, and the second pointer will keep track of the position to insert the element that is not equal to val.
 // we return number of elements that are not equal to val.
 // This way, we can modify the array in place and return the new length of the array without the elements equal to val.
 
