@@ -2,7 +2,7 @@
 // Difficulty: Easy
 // Approach: Two Pointers
 
-//Trick:
+// Trick:
 // focus on assigning non-val elements rather than val elements
 
 // Intuition:

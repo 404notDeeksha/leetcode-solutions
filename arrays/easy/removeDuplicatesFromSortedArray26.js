@@ -10,10 +10,6 @@
 // Time Complexity: O(n), where n is the length of the array.
 // Space Complexity: O(1), since we are modifying the array in place and not using any extra space.
 
-/**
- * @param {number[]} nums
- * @return {number}
- */
 var removeDuplicates = function(nums) {
     let i=-1;
     let j=0;

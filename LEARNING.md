@@ -30,3 +30,9 @@ const isAlphaNum = (char) => {
 <!-- Q.977 -->
 -Best sorting algo can be under O(nlogn) complexity only.
 - To achieve lower than this, increase Space Complexity.
+
+**CASES TO REMOVE DUPLICATES**:
+- Take one pointer where unique element will be place
+- Take another pointer to iterate through array.
+- append position of 1st pointer before putting in new element
+-
