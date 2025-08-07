@@ -35,4 +35,7 @@ const isAlphaNum = (char) => {
 - Take one pointer where unique element will be place
 - Take another pointer to iterate through array.
 - append position of 1st pointer before putting in new element
--
+
+- IF elements are within array index,
+- Use Negation marking at index position to track duplicates.
+- Element -> Mark Index -> (-)Element -> If Element<0 -> Index === Duplicate Element
