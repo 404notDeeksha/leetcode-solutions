@@ -8,6 +8,8 @@
 // When we encounter a non-zero element, we will swap it with the first zero element.
 // This way, we will move all the zero elements to the end of the array while maintaining the order of the non-zero elements.
 
+// Another way of doing this is to place all non-0s elements into 0's positions in array, & filling rest of array with 0s (more faster)
+
 // Complexity:
 // Time Complexity: O(n), where n is the length of the input array.
 // Space Complexity: O(1), since we are not using any extra space.
