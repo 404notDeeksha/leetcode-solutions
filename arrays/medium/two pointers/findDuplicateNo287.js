@@ -13,6 +13,7 @@
 // - If a number is already marked (negative), it means it is a duplicate
 // - Return the duplicate number
 // - This approach modifies the input array, so it is not suitable for all cases
+// - Tip: Remember to mark index from elements 
 
 // Complexity
 // - Time complexity: O(n)
