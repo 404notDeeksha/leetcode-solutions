@@ -47,5 +47,37 @@ var numSubarrayProductLessThanK = function(nums, k) {
     return result;
     };
 
-console.log(numSubarrayProductLessThanK([10,5,2,6],100));
+
+console.log("Base Example", numSubarrayProductLessThanK([10,5,2,6], 100)); // 8
+
+// 🔹 Edge case: k = 0 (no product can be < 0)
+console.log("k = 0", numSubarrayProductLessThanK([1,2,3], 0)); // 0
+
+// 🔹 Edge case: k = 1 (all nums >= 1, no valid subarray)
+console.log("k = 1", numSubarrayProductLessThanK([1,2,3], 1)); // 0
+
+// 🔹 Edge case: Single element smaller than k
+console.log("Single element < k", numSubarrayProductLessThanK([5], 10)); // 1
+
+// 🔹 Edge case: Single element >= k
+console.log("Single element >= k", numSubarrayProductLessThanK([10], 10)); // 0
+
+// 🔹 Edge case: All elements < k
+console.log("All elements < k", numSubarrayProductLessThanK([1,1,1], 5)); 
+// 6 → [1],[1],[1],[1,1],[1,1],[1,1,1]
+
+// 🔹 Edge case: Large element in between
+console.log("Large element in middle", numSubarrayProductLessThanK([1,2,50,2,3], 10)); 
+// Expected: 6 → [1],[2],[1,2],[2],[3],[2,3]
+
+// 🔹 Edge case: Repeated numbers
+console.log("Repeated numbers", numSubarrayProductLessThanK([2,2,2], 10)); 
+// 6 → [2],[2],[2],[2,2],[2,2],[2,2,2]
+
+// 🔹 Edge case: Decreasing sequence
+console.log("Decreasing sequence", numSubarrayProductLessThanK([10,9,8,7], 100)); 
+// Expected: 7 → [10],[9],[8],[7],[10,9],[9,8],[8,7] 
+
+// 🔹 Edge case: Empty array
+console.log("Empty array", numSubarrayProductLessThanK([], 100)); // 0
 
