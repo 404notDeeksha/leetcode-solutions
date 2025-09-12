@@ -38,5 +38,42 @@ var maxArea = function(height) {
     return max;
 };
 
-console.log(maxArea([1,8,6,2,5,4,8,3,7])); //49
-console.log(maxArea([1,1])); //1
+// ✅ Base Example
+console.log("Base Example", maxArea([1,8,6,2,5,4,8,3,7])); 
+// Expected: 49 (between lines at indices 1 and 8)
+
+// ✅ Edge case: Minimum size array
+console.log("Two elements only", maxArea([1,1])); 
+// Expected: 1
+
+// ✅ Edge case: Increasing heights
+console.log("Increasing heights", maxArea([1,2,3,4,5])); 
+// Expected: 6 (between 2 and 5)
+
+// ✅ Edge case: Decreasing heights
+console.log("Decreasing heights", maxArea([5,4,3,2,1])); 
+// Expected: 6 (between 5 and 2)
+
+// ✅ Edge case: All same heights
+console.log("All same heights", maxArea([5,5,5,5,5])); 
+// Expected: 20 (5 * distance 4)
+
+// ✅ Edge case: Large peak in middle
+console.log("Peak in middle", maxArea([1,2,100,2,1])); 
+// Expected: 4 (between first and last, height = 1, width = 4)
+
+// ✅ Edge case: Single very tall + small others
+console.log("One tall, others small", maxArea([1000,1,1,1,1000])); 
+// Expected: 4000 (between first and last)
+
+// ✅ Edge case: Zig-zag heights
+console.log("Zig-zag heights", maxArea([1,3,2,5,25,24,5])); 
+// Expected: 24 (between 25 and 5 at index 6)
+
+// ✅ Edge case: Empty array
+console.log("Empty array", maxArea([])); 
+// Expected: 0
+
+// ✅ Edge case: One element only
+console.log("Single element", maxArea([5])); 
+// Expected: 0
