@@ -3,6 +3,7 @@ export const ListNode = function(val, next) {
     this.val = (val===undefined ? 0 : val)
     this.next = (next===undefined ? null : next)
 }
+// [val, null]
 
 export const buildLinkedList = (arr)=>{
     if (arr.length === 0) return null;
