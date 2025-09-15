@@ -51,5 +51,21 @@ var minSubArrayLen = function(target, nums) {
 };
 
 
-console.log(minSubArrayLen(11,[1,2,3,4,5]));
-console.log(minSubArrayLen(11,[1,2,3,4,5]));
+// Single element smaller than target
+console.log("Single element < target", minSubArrayLen(7, [5])); // 0
+
+// Single element equal to target
+console.log("Single element == target", minSubArrayLen(5, [5])); // 1
+
+// Target larger than total array sum
+console.log("Target > total sum", minSubArrayLen(15, [1, 2, 3, 4])); // 0
+
+// Whole array needed to meet target
+console.log("Whole array required", minSubArrayLen(11, [1, 2, 3, 4, 1])); // 5
+
+// Multiple valid subarrays, pick shortest
+console.log("Multiple subarrays, shortest chosen", minSubArrayLen(11, [1, 2, 3, 4, 5])); // 3
+
+// Shorter subarray appears later
+console.log("Shorter window later in array", minSubArrayLen(7, [2, 3, 1, 2, 4, 3])); // 2
+
