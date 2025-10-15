@@ -43,4 +43,4 @@ for (let [key, value] of map) {
   console.log(`${key}: ${value}`);
 }
 ```
-
+- Map is generally used to keep count of Unique element's repeated occurences.
