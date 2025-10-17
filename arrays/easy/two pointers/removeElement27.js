@@ -6,7 +6,7 @@
 // Problem:
 // Given: is integer array `nums` & an integer `val`.
 // What to do: Modify integer array `nums` so that it only has non-val elements present.
-// Return: the number of elements in nums which are not equal to val.
+// Return: the number of elements (not index) in nums which are not equal to val.
 
 // --------------------------------
 // Intuition:

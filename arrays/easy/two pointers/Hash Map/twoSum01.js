@@ -3,6 +3,11 @@
 // Implementation: HashMap + Two pointer
 
 // -----------------------------
+// Intuition
+// We need to capture two indices whose elements will add upto target.
+// We can use Hashmap which will store target - element against indice.  
+
+// -----------------------------
 // Approach:
 // Given an array of integers, we need to find two numbers such that they add up to a specific target.
 // We can use a hashmap to solve this problem.
