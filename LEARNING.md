@@ -39,3 +39,17 @@ const isAlphaNum = (char) => {
 - IF elements are within array index,
 - Use Negation marking at index position to track duplicates.
 - Element -> Mark Index -> (-)Element -> If Element<0 -> Index === Duplicate Element
+
+## Continue & Break:
+1. Continue - 
+- Purpose:
+- It completely stops the current loop (whether for, while, or do-while) and jumps out of it.
+- When to use:
+- When you’ve found what you’re looking for or don’t need to continue looping
+
+2. Break -
+- Purpose:
+- It skips the rest of the current loop iteration and moves to the next iteration.
+- When to use:
+- When you want to ignore certain cases but still keep the loop running.
+

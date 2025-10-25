@@ -1,13 +1,26 @@
 // LeetCode #1876. Substrings of Size Three with Distinct Characters
 // Difficulty: Easy
 // Category: Arrays
-// Approach: Sliding Window
+    
+// 1st approach : Two pointers
+
+// Problem:
+// We have a string s in which we have to find number of substrings of length = 3 such that no char in substring gets repeated. same substring repeatation must be counted too.
+
+// Intuition: 
+// We will take 3 variables to store 3 consecutive characters of string s. We will compare them & append count if all three are unique. 
+
+// Approach:
+// We will iterate through array.
+// We will assign 3 variables to 3 consecutive values.
+// We will check if they are unique.
+// If they are, count shall be appended.
+// count shall be returned.
 
 // More Optimum & easier Approach
-//  Complexity: O(n) & Space: O(1)
+// Time Complexity: O(n) & Space: O(1)
 
-// # Code
-// javascript []
+// Code
 var countGoodSubstrings = function (s) {
   let count = 0;
   for (let i = 0; i <= s.length - 3; i++) {
@@ -21,7 +34,7 @@ var countGoodSubstrings = function (s) {
   return count;
 };
 
-console.log(countGoodSubstrings("xyzzaz"));
+console.log(countGoodSubstrings("xyzzaz")); //1
 console.log("Empty string →", countGoodSubstrings("")); //0
 console.log("String with less than 3 characters →", countGoodSubstrings("ab")); //0
 console.log(
@@ -49,17 +62,29 @@ console.log(
 console.log(
   "String with special characters and mixed case →",
   countGoodSubstrings("a!B@")
-); //2
+);  //2
 
-// 2nd Appraoch :
+// -----------------------------------------
 
-// we will iterate over the String & will add every new element of string to a set.
-// We will check if set already doesnt have same element present, if yes, we will delete all elements in set from left, till element duplication is eliminated.
-// We will do this by comparing char of string from left, by tracking string from left.
-// when set size will be greater than 3, count will increment.
-// return count.
+// 2nd Approach : Sliding Window + Sets
+// More scalable. Can work for substring of size k
 
-//Complexity: O(n) & Space: O(n)
+
+// Intuition:
+// We will use set to store good substring char.
+// If char gets repeated, set will be modified from left until set has good substring again.
+
+// Approach:
+// Initialise two variables, count=0 & left=0.
+// Iterate through the string.
+//    - Check set if it already has the char.
+//    - If yes, use left pointer to delete all char in set from left to right until the char gets deleted.
+//    - If no, add char to set.
+// Append count if size of set is === 3 at every iteration.
+//    - when set size is 3, delete string char from left. append left.  
+// Return count. 
+
+// Time Complexity: O(n) & Space: O(k) //k - size of substring
 
 var countGoodSubstrings1 = function (s) {
   let set = new Set();
@@ -71,12 +96,12 @@ var countGoodSubstrings1 = function (s) {
       left++;
     }
     set.add(s[i]);
-    if (set.size >= 3) {
+    if (set.size === 3) {
       count++;
+      set.delete(s[left]);
+      left++;
     }
   }
   return count;
 };
 
-// console.log("",countGoodSubstrings("xyzzaz"));
-// console.log("",countGoodSubstrings("aababcabc"));
