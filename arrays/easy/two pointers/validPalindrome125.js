@@ -1,9 +1,26 @@
-//Leetcode 125. Valid Palindrome
+// Leetcode 125. Valid Palindrome
 // Difficulty: Easy
 // Approaches: Two Pointers
 
 //Most optimum Solution
 
+// Problem:
+// Given a string, we have to check if it is a valid palindrome. It can have only alphaNumeric characters.
+
+// Intuition:
+// We will need two pointers & check string from start & end. Only alphanumeric char must be checked & non-alphanumeric ones must be skipped.
+// if two pointers meet each other, string is a valid palindrome. 
+// If not, return false.
+
+// Approach:
+// We will use two pointers at end points of string, & convert whole string to lowercase.
+// We will iterate the string untill two pointers meet.
+//      - We will check if both pointers are pointing to a valid alphanumeric char.
+//      - If yes, we will compare if they are equal or not. If not, return false.
+//      - If no, we shall skip the pointer untill it points to a valid alphanumeric char.
+// When pointers meet each other, return true; 
+
+// Code:
 var isPalindrome = function(s) {
     s=s.toLowerCase();
     let left=0;
@@ -33,6 +50,10 @@ var isPalindrome = function(s) {
         return regex.test(char);
 }
 
+// Complexity : Time- O(n) Space: O(1)
+
+
+// -----------------------------------
 //2nd solution- Concise 
 
 //Intuition:
@@ -61,8 +82,11 @@ var isPalindromeOptimized = function(s) {
 
 //Used in 1st Solution
 // const isAlphaNum = (char) => {
-//  return /[a-zA-Z0-9]/.test(char);
+//  return /[a-z0-9]/.test(char);
 // }
+
+
+//-----------------------------------
 
 //3rd Solution: less optimum
 

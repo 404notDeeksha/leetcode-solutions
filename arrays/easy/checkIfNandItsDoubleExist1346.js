@@ -3,6 +3,8 @@
 // Category: Arrays
 // Approach: Sets
 
+// Problem: Given an array of integers, we have to check if duplicate of an array element exist in array.
+
 // # Intiution
 // - Use a set to store the elements of the array
 // - Check if the double of the element exists in the set
@@ -18,16 +20,12 @@
 // - O(n) for the set
 
 // # Code
-// javascript []
-
-/**
- * @param {number[]} arr
- * @return {boolean}
- */
 var checkIfExist = function (arr) {
   let l = 0;
   let set = new Set();
   while (l < arr.length) {
+
+    // Since array is integers array, check ensures even integers are only processed.
     if (set.has(2 * arr[l]) || (arr[l] % 2 === 0 && set.has(arr[l] / 2))) {
       return true;
     }
@@ -36,3 +34,5 @@ var checkIfExist = function (arr) {
   }
   return false;
 };
+
+
