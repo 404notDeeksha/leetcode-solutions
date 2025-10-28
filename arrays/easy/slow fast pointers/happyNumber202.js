@@ -17,37 +17,36 @@
 //      - Fast pointer moves two steps at a time
 //      - If the fast pointer meets the slow pointer, It will move out of loop & it means we are in a cycle.
 //      - If the fast pointer reaches 1, It will move out of loop & it means the number is happy
-// - Return true if the number is happy (fast === 1), false otherwise.
+// 2. Return true if the number is happy (fast === 1), false otherwise.
 
 // Complexity
-// Time complexity: O(logn) as sumSqDigits1 will take O(logn) time to calculate the sum of the square of each digit. 
+// Time complexity: O(logn) as sumSqDigits1 will take O(logn) time to calculate the sum of the square of each digit.
 // - Space complexity: O(1)
 // - This approach does not use extra space for HashSet
 // - This approach is more efficient than the HashSet approach
 
-
 // # Code
 // javascript []
-var isHappy = function(n) {
-    let slow = n;
-    let fast = sumSqDigits1(n);
+var isHappy = function (n) {
+  let slow = n;
+  let fast = sumOfSquares(n);
 
-    while(fast!==1 && fast!==slow){
-        slow=sumSqDigits1(slow);
-        fast=sumSqDigits1(sumSqDigits1(fast));
-    }
-    return fast===1;
+  while (fast !== 1 && fast !== slow) {
+    slow = sumOfSquares(slow);
+    fast = sumOfSquares(sumOfSquares(fast));
+  }
+  return fast === 1;
 };
 
-const sumSqDigits1=(n)=>{
-    let sum=0;
-    while(n>0){
-        let num=n%10;
-        sum=sum+num*num;
-        n=Math.floor(n/10);
-    }
-    return sum;
-}
+const sumOfSquares = (n) => {
+  let sum = 0;
+  while (n > 0) {
+    let num = n % 10;
+    sum = sum + num * num;
+    n = Math.floor(n / 10);
+  }
+  return sum;
+};
 
 console.log("Happy Number Approach 1: Slow and Fast Pointer");
 
@@ -83,7 +82,6 @@ console.log("Minimal input", isHappy(0));
 console.log("Quick loop number", isHappy(4));
 // Expected: false → known cycle starter
 
-
 // --------------------------
 
 // Alternate Approach : This doesnt work for cycle detection through pointers
@@ -94,7 +92,7 @@ console.log("Quick loop number", isHappy(4));
 // - If we reach 1, it means the number is happy
 // - Return true if the number is happy, false otherwise
 
-// # Complexity 
+// # Complexity
 // - Time complexity: O(logn)
 // - a no. n has around logn digits
 // - each digit will take O(1) time to square
@@ -106,22 +104,22 @@ console.log("Quick loop number", isHappy(4));
 
 // # Code
 // javascript []
-var isHappy = function(n) {
-    let seen = new Set();
-    while(n!==1) {
-        if(seen.has(n)) return false;
-        seen.add(n);
-        n=sumSqDigits(n);
-    }
-    return true;
+var isHappy = function (n) {
+  let seen = new Set();
+  while (n !== 1) {
+    if (seen.has(n)) return false;
+    seen.add(n);
+    n = sumSqDigits(n);
+  }
+  return true;
 };
 
-const sumSqDigits=(n)=>{
-    let sum=0;
-    while(n>0){
-        let num=n%10;
-        sum=sum+num*num;
-        n=Math.floor(n/10);
-    }
-    return sum;
-}
+const sumSqDigits = (n) => {
+  let sum = 0;
+  while (n > 0) {
+    let num = n % 10;
+    sum = sum + num * num;
+    n = Math.floor(n / 10);
+  }
+  return sum;
+};
