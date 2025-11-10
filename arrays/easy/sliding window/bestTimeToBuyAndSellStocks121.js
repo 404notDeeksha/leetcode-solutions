@@ -13,7 +13,8 @@
 // - Use two pointers to find the maximum profit
 // - Use a variable to keep track of the starting index of the sliding window.
 // - Use a variable to keep track of the ending index of the sliding window.
-// - Use a variable to keep track of the maximum profit
+//          - if stock at end index is smaller than stock at start index, assign end index to start index.
+// - Use a variable to keep track of the maximum profit.
 // - return the maximum profit
 
 // # Complexity
