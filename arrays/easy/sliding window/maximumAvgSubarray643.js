@@ -41,6 +41,16 @@ var findMaxAverage = function (nums, k) {
   return maxSum / k;
 };
 
+//2nd Approach -
+
+// 1. Initialise maxSum to lowest possible value.
+// 2. Iterate through array.
+//      - Get array sum uptil k length of array.
+//      - Assign it to maxSum.
+//      - With more Iterations, record sum for next k elements by adding end element & deducting start element.
+// 3. Track maxSum from all possible combinations.
+// 4. return maxSum/k. 
+
 // Another Approach -
 var findMaxAverageOther = function (nums, k) {
   let maxSum = -Infinity;
