@@ -14,11 +14,7 @@
 // Time complexity: O(n) where n is the length of the string.
 // Space complexity: O(1) since we are using a fixed-size map.
 
-/**
- * @param {string} s
- * @return {number}
- */
-
+// code
 var romanToInt = function(s) {
     let map={
      'I':1,
@@ -33,7 +29,7 @@ var romanToInt = function(s) {
     let j=-1;
     for(let index=0; index<s.length; index++){
          if(index<s.length-1 && map[s[index]]<map[s[index+1]]){            
-             number-=map[s[index]];
+             number -= map[s[index]];
          }
          else{            
              number += map[s[index]];
