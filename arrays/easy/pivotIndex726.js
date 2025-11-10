@@ -1,4 +1,4 @@
-// Leetcode 726. Pivot Index
+// Leetcode 726/ 724. Pivot Index
 // Difficulty: Easy
 // Approach: Two Pointers
 
