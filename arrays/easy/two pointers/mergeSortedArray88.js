@@ -34,6 +34,7 @@ var merge = function (nums1, m, nums2, n) {
   let k = m + n - 1;
   let j = n - 1;
   let i = m - 1;
+
   while (j >= 0) {
     if (i < 0 || nums2[j] >= nums1[i]) {
       nums1[k] = nums2[j];
@@ -71,3 +72,5 @@ console.log(
   "nums1 smaller but not empty:",
   merge([1, 0, 0, 0], 1, [2, 3, 4], 3)
 ); // [1,2,3,4]
+
+//  Tricky - j is conditional body & merging must continue even if i pointer < 0.
