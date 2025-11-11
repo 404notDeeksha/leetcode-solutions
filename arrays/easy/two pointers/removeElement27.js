@@ -52,3 +52,5 @@ console.log(removeElement([3, 3, 3], 3)); // Output: 0 (all elements are val)
 console.log(removeElement([1, 2, 4], 3)); // Output: 3 (no element equals val)
 console.log(removeElement([3], 3)); // Output: 0 (single element equals val)
 console.log(removeElement([2], 3)); // Output: 1 (single element not equal to val)
+
+// Tricky - place elements in same pointer index only.
