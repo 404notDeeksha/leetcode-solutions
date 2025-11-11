@@ -1,13 +1,17 @@
 // Leetcode: 16. 3Sum Closest
 // Difficulty: Medium
 
-//------------------------
+// ------------------------
+// Problem: Give the closest value of sum towards target.
+
 // Intuition:
 // This is a variation of the classic "3Sum" problem. 
 // Since we need combinations of 3 elements and to minimize |target - sum|, 
-// sorting helps us efficiently adjust pointers and move closer to the target.
+// Sorting helps us efficiently adjust pointers and move closer to the target.
+// Sum closer to the target will get us closest sum.
+//      - so difference between target & sum must be lowest.
 
-//------------------------
+// ------------------------
 // Approach:
 // 1. Sort the array to enable two-pointer traversal.
 // 2. Fix one element (nums[i]) and use two pointers (left = i+1, right = end) to find the best possible pair that forms a sum closest to the target.
@@ -28,6 +32,7 @@
 var threeSumClosest = function(nums, target) {
     let closestSum = Infinity;
     nums.sort((a,b) => a-b);
+
     for(let i = 0; i<nums.length-2; i++){
         let left = i+1;
         let right = nums.length-1;
@@ -52,10 +57,15 @@ return closestSum};
 // Edge Cases:
 console.log("Min input size", threeSumClosest([1, 2, 3], 6));  //6
 console.log("All same numbers - Duplicates", threeSumClosest([2, 2, 2, 2], 5));  //6
-console.log("Exact match exists", threeSumClosest([-1, 2, 1, -4], 2));   //2
+console.log("Exact match exists", threeSumClosest([-1, 2, 1, -4], 2));   //2 
 console.log("All negative numbers", threeSumClosest([-8, -6, -5, -2], -10));  //-13
 console.log("All positive numbers", threeSumClosest([5, 6, 7, 8], 3));  //18
 console.log("Target smaller than all sums", threeSumClosest([10, 20, 30], -100));  //60 
 console.log("Target larger than all sums", threeSumClosest([1, 2, 3, 4], 100));  //9
 console.log("Large numbers", threeSumClosest([1000000, 1000000, 1000000], 2999999));  //300000
 console.log("Duplicates with multiple closest", threeSumClosest([-1, 2, 1, -4, 2], 1));  //0
+
+
+// [-4 , -1 , 1 , 2], 2 -> -3|2 -> 5
+// -1|2 -> 3
+// 2|2 -> 0 
