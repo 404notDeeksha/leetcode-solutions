@@ -65,7 +65,4 @@ console.log("Target larger than all sums", threeSumClosest([1, 2, 3, 4], 100)); 
 console.log("Large numbers", threeSumClosest([1000000, 1000000, 1000000], 2999999));  //300000
 console.log("Duplicates with multiple closest", threeSumClosest([-1, 2, 1, -4, 2], 1));  //0
 
-
-// [-4 , -1 , 1 , 2], 2 -> -3|2 -> 5
-// -1|2 -> 3
-// 2|2 -> 0 
+//Tricky: comparison part
