@@ -5,6 +5,9 @@
 // Problem
 // Given a roman numeral as string, return its number form.
 
+// Intuition + Trick:
+// Roman forms are summed if Larger Roman falls before smaller Roman.
+// In opposite cases, Smaller Roman is subtracted from larger Roman.
 
 // Intuition:
 // Create a map of Roman Numerals.
