@@ -2,6 +2,12 @@
 // Difficulty: Easy
 // Approach: Two Pointers
 
+// Problem
+// integer array nums is sorted in ascending order.
+// duplicates present in array shall be removed in-place.
+// return length of unique elements.
+// elements order must be maintained.
+
 // Intuition:
 // Since the array is sorted, we can use two pointers to keep track of unique elements.
 // The first pointer(i) will keep track of position to compare jth element & incremented to insert unique element. the second pointer(j) will trace array.
