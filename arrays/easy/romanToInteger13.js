@@ -2,6 +2,8 @@
 // Difficulty: Easy
 // Approach: Map + Iteration
 
+// Problem
+// Given a roman numeral as string, return its number form.
 
 
 // Intuition:
