@@ -9,11 +9,12 @@
 // Roman forms are summed if Larger Roman falls before smaller Roman.
 // In opposite cases, Smaller Roman is subtracted from larger Roman.
 
-// Intuition:
-// Create a map of Roman Numerals.
-// Iterate the string. 
-// Check if string has more than one character & if next character is greater than current one, subtract current from total.
-// else add current to total.
+// Approach:
+// 1. Create a map of Roman Numerals.
+// 2. Iterate the string.
+//      - Check if string has more than one character left to iterate.
+//      - if next character is greater than current one, subtract current from total.
+//      - else add current to total.
 
 // Complexity:
 // Time complexity: O(n) where n is the length of the string.
