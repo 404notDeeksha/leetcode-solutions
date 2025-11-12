@@ -4,22 +4,24 @@
 
 // Intuition:
 // Since the array is sorted, we can use two pointers to keep track of unique elements.
-// The first pointer(i) will keep track of position to insert unique element. the second pointer(j) will trace array.
+// The first pointer(i) will keep track of position to compare jth element & incremented to insert unique element. the second pointer(j) will trace array.
+// elements will be swapped when they dont match.
 
 //Complexity:
 // Time Complexity: O(n), where n is the length of the array.
 // Space Complexity: O(1), since we are modifying the array in place and not using any extra space.
 
-var removeDuplicates = function(nums) {
-    let i=-1;
-    let j=0;
-    while(j<nums.length){
-        if(nums[j]!==nums[i]){
-            nums[++i]=nums[j];
-        } 
-        j++;
+// Code
+var removeDuplicates = function (nums) {
+  let i = -1;
+  let j = 0;
+  while (j < nums.length) {
+    if (nums[j] !== nums[i]) {
+      nums[++i] = nums[j];
     }
-    return i+1;
+    j++;
+  }
+  return i + 1;
 };
 
 // // 🧪 Edge Case Tests
