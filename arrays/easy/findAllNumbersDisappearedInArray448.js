@@ -9,7 +9,7 @@
 // Given an array of integers has all elements in range [1,n]. We have to return elements which are absent in array.
 
 // Intuition
-// - Mark all the nos which are present wrto indexes in array as -ve form of the number.
+// - Mark all the nos which are present wrto indexes in array as -ve form of that number.
 // - result will have indexes whose elements are positive.
 
 // Approach:
@@ -62,6 +62,7 @@ console.log("Random missing numbers", findDisappearedNumbersO([4,3,2,7,8,2,3,1])
 // 4. Single element present (n=1)
 console.log("Single element - present", findDisappearedNumbersO([1]));
 // Expected: []
+
 console.log("Single element - missing", findDisappearedNumbersO([2]));
 // Expected: [1]
 
