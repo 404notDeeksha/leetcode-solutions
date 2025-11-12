@@ -15,29 +15,56 @@
 // Space complexity: O(1) since we are using a fixed-size map.
 
 // code
-var romanToInt = function(s) {
-    let map={
-     'I':1,
-     'V':5,
-     'X':10,
-     'L':50,
-     'C':100,
-     'D':500,
-     'M':1000,
+var romanToInt = function (s) {
+  let map = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+  let number = 0;
+  let j = -1;
+  for (let i = 0; i < s.length; i++) {
+    if (i < s.length - 1 && map[s[i]] < map[s[i + 1]]) {
+      number -= map[s[i]];
+    } else {
+      number += map[s[i]];
     }
-    let number=0;
-    let j=-1;
-    for(let index=0; index<s.length; index++){
-         if(index<s.length-1 && map[s[index]]<map[s[index+1]]){            
-             number -= map[s[index]];
-         }
-         else{            
-             number += map[s[index]];
-         }
-         j++;    
-    }
-    return number;
- };
+    j++;
+  }
+  return number;
+};
 
- console.log(romanToInt("III")); // 3
- console.log(romanToInt("MCMXLII")); //1942
+// 🧪 Edge Case Tests
+console.log("Basic numeral:", romanToInt("III"));
+// 3
+
+console.log("Subtractive rule (IV):", romanToInt("IV"));
+// 4
+
+console.log("Simple mixed:", romanToInt("IX"));
+// 9
+
+console.log("Larger compound:", romanToInt("LVIII"));
+// 58 → L(50)+V(5)+III(3)
+
+console.log("Typical test:", romanToInt("MCMXCIV"));
+// 1994 → M(1000)+CM(900)+XC(90)+IV(4)
+
+console.log("Single numeral:", romanToInt("V"));
+// 5
+
+console.log("Highest possible (MMMCMXCIX):", romanToInt("MMMCMXCIX"));
+// 3999 → max valid roman
+
+console.log("Repeating numerals:", romanToInt("XXVII"));
+// 27 → 10+10+5+1+1
+
+console.log("Lower combination:", romanToInt("XLII"));
+// 42 → XL(40)+II(2)
+
+console.log("Hundreds mix:", romanToInt("CDXLIV"));
+// 444 → CD(400)+XL(40)+IV(4)
