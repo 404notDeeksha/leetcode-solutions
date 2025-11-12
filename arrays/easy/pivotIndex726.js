@@ -33,7 +33,34 @@ var pivotIndex = function(nums) {
          }
          leftSum+=nums[i];
     }
-     return -1;
- };
+// 🧪 Edge Case Tests
 
- console.log("pivot Index is ",pivotIndex([1,7,3,6,5,6])); //3
+console.log("Typical case:", pivotIndex([1, 7, 3, 6, 5, 6]));
+// 3 → left=11, right=11
+
+console.log("Pivot at index 0:", pivotIndex([2, 1, -1]));
+// 0 → left=0, right=0
+
+console.log("Pivot at last index:", pivotIndex([-1, -1, 0, 1, 1, 0]));
+// 5 → left sum = right sum = 0
+
+console.log("No pivot exists:", pivotIndex([1, 2, 3]));
+// -1
+
+console.log("All zeros:", pivotIndex([0, 0, 0, 0, 0]));
+// 0 → first index works, left=0, right=0
+
+console.log("Single element:", pivotIndex([5]));
+// 0 → left=0, right=0
+
+console.log("Negative numbers:", pivotIndex([-1, -1, -1, 0, 1, 1]));
+// 0 → left=0, right=0
+
+console.log("Two elements no pivot:", pivotIndex([1, -1]));
+// -1
+
+console.log("Large numbers:", pivotIndex([1000000, -999999, -1, 0]));
+// 3 → left=0, right=0
+
+console.log("All equal elements:", pivotIndex([2, 2, 2, 2, 2, 2]));
+// -1 → no position balances left/right
