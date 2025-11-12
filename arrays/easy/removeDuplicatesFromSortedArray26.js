@@ -22,5 +22,61 @@ var removeDuplicates = function(nums) {
     return i+1;
 };
 
-console.log(removeDuplicates([1,1,2])); // Output: 2
-console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4])); // Output: 5
+// // 🧪 Edge Case Tests
+
+console.log("Typical case:", (() => {
+    let arr = [1, 1, 2];
+    let k = removeDuplicates(arr);
+    return [k, arr.slice(0, k)];
+  })());
+  // [2, [1, 2]]
+  
+  console.log("All unique:", (() => {
+    let arr = [1, 2, 3, 4];
+    let k = removeDuplicates(arr);
+    return [k, arr.slice(0, k)];
+  })());
+  // [4, [1,2,3,4]]
+  
+  console.log("All duplicates:", (() => {
+    let arr = [2, 2, 2, 2];
+    let k = removeDuplicates(arr);
+    return [k, arr.slice(0, k)];
+  })());
+  // [1, [2]]
+  
+  console.log("Single element:", (() => {
+    let arr = [5];
+    let k = removeDuplicates(arr);
+    return [k, arr.slice(0, k)];
+  })());
+  // [1, [5]]
+  
+  console.log("Empty array:", (() => {
+    let arr = [];
+    let k = removeDuplicates(arr);
+    return [k, arr.slice(0, k)];
+  })());
+  // [0, []]
+  
+  console.log("Negative numbers:", (() => {
+    let arr = [-3, -3, -2, -1, -1, 0];
+    let k = removeDuplicates(arr);
+    return [k, arr.slice(0, k)];
+  })());
+  // [4, [-3,-2,-1,0]]
+  
+  console.log("Large range sorted:", (() => {
+    let arr = [0, 0, 1, 1, 1, 2, 3, 3, 4];
+    let k = removeDuplicates(arr);
+    return [k, arr.slice(0, k)];
+  })());
+  // [5, [0,1,2,3,4]]
+  
+  console.log("Two alternating values:", (() => {
+    let arr = [1, 1, 2, 2, 2, 3, 3];
+    let k = removeDuplicates(arr);
+    return [k, arr.slice(0, k)];
+  })());
+  // [3, [1,2,3]]
+  
