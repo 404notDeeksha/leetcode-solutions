@@ -8,8 +8,14 @@
 
 // 1st approach: Brute Force
 
-// 1. We will use a pointer to iterate through each element of array, & save any element on its left (if its bigger than it) in leftMax, & any element on its right (if its bigger than it) in rightMax. 
-// 2. for each element, min of its(leftMax & rightMax) - element itself will contain the water.
+// Intuition:
+// - First elevation must be higher then trailing ones to hold water.
+// - To hold water, an element's left side & right side must be picked & minimum of these must be more than the element.
+// - store total water in a variable.
+
+// Approach:
+// 1. We will use a pointer to iterate through each element of array, & save any element on its left (if its bigger than it) in leftMax, & any element on its right (if its bigger than it) in rightMax.
+// 2. for each element, min of its (leftMax & rightMax) - element itself will contain the water.
 // 3. res will be iterated as per water contained.
 
 var trapBF = function(height) {
