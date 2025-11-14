@@ -13,14 +13,14 @@
 //    - key = fruit type.
 //    - value = count of that fruit in the current window.
 
-// 2. Use one pointer `i` to mark the start of the window 
+// 2. Use one pointer `i` to mark the start of the window
 //    - the first tree we currently include.
 //    - This will help us shrink the window when we exceed 2 fruit types.
 
 // 3. Use another pointer `j` to trace subsequent trees.
 //    For each tree, add its fruit to the map and increase its count.
 
-// 4. If the map ever has more than 2 types of fruits, 
+// 4. If the map ever has more than 2 types of fruits,
 //    - start shrinking from the left:
 //    - reduce count of fruits[left]
 //    - if count becomes 0, remove that fruit from the map
@@ -29,37 +29,36 @@
 
 // 5. At each step, update the maximum window size (j - i + 1).
 
-// The result will be the largest window we could maintain 
+// The result will be the largest window we could maintain
 // with at most 2 fruit types → maximum fruits collected.
-
 
 // Complexity:
 // Time : O(n);
 // Space: O(1);
 
-var totalFruit = function(fruits) {
-    let n = fruits.length;
-    let maxLen = 0;
-    let map = new Map();
-    let i=0;
-    for(let j=0; j<n ; j++ ){
-      map.set(fruits[j],(map.get(fruits[j]) || 0) + 1);
-  
-      while(map.size > 2){
-          map.set(fruits[i], map.get(fruits[i]) - 1);
-          if(map.get(fruits[i]) === 0){
-              map.delete(fruits[i]);
-          }
-          i++;
+var totalFruit = function (fruits) {
+  let n = fruits.length;
+  let maxLen = 0;
+  let map = new Map();
+  let i = 0;
+  for (let j = 0; j < n; j++) {
+    map.set(fruits[j], (map.get(fruits[j]) || 0) + 1);
+
+    while (map.size > 2) {
+      map.set(fruits[i], map.get(fruits[i]) - 1);
+      if (map.get(fruits[i]) === 0) {
+        map.delete(fruits[i]);
       }
-        maxLen = Math.max(maxLen, j - i + 1);
+      i++;
     }
-      return maxLen;
-  };
+    maxLen = Math.max(maxLen, j - i + 1);
+  }
+  return maxLen;
+};
 
 // --------------------------------------------------
 
-// Brute Force 
+// Brute Force
 // Approach:
 
 // 1. For each tree index i, start fresh with an empty set (called basket) to keep track of the unique fruits.
@@ -73,22 +72,35 @@ var totalFruit = function(fruits) {
 // Time: O(n2);
 // Space: O(1)
 
-var totalFruitBF = function(fruits) {
-    let n = fruits.length;
-    let maxLen = 0;
+var totalFruitBF = function (fruits) {
+  let n = fruits.length;
+  let maxLen = 0;
 
-    for (let i = 0; i < n; i++) {
-        let basket = new Set();
-        let count = 0;
+  for (let i = 0; i < n; i++) {
+    let basket = new Set();
+    let count = 0;
 
-        for (let j = i; j < n; j++) {
-            basket.add(fruits[j]);
+    for (let j = i; j < n; j++) {
+      basket.add(fruits[j]);
 
-            if (basket.size > 2) break; // can't use more than 2 baskets
+      if (basket.size > 2) break; // can't use more than 2 baskets
 
-            count++;
-            maxLen = Math.max(maxLen, count);
-        }
+      count++;
+      maxLen = Math.max(maxLen, count);
     }
-    return maxLen;
+  }
+  return maxLen;
 };
+
+// Edge Cases -
+
+console.log("Empty array", totalFruit([])); // 0
+console.log("Single fruit type", totalFruit([5])); // 1
+console.log("All same fruit type", totalFruit([2, 2, 2, 2])); // 4
+console.log("Exactly two types repeating", totalFruit([1, 2, 1, 2, 1, 2])); // 6
+console.log("More than two types immediately", totalFruit([1, 2, 3])); // 2
+console.log("Changing types after long stretch", totalFruit([0, 1, 2, 2])); // 3
+console.log("Alternating three types", totalFruit([1, 2, 3, 2, 2])); // 4
+console.log("Large input single type", totalFruit(new Array(100000).fill(9))); // 100000
+console.log("Edge with sudden type shift", totalFruit([1, 1, 1, 2, 3, 3, 4])); // 3
+console.log("Negative or arbitrary fruit types", totalFruit([-1, -1, 0, 1, 1])); // 3
