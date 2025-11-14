@@ -10,6 +10,7 @@
 
 // Intuition:
 // - First elevation must be higher then trailing ones to hold water.
+// - Smaller Boundary is the limiting factor to hold water.
 // - To hold water, an element's left side & right side must be picked & minimum of these must be more than the element.
 // - store total water in a variable.
 
