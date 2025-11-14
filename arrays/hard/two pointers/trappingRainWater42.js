@@ -57,7 +57,8 @@ var trap = function (height) {
   let water = 0;
   let left = 0;
   let right = height.length - 1;
-  let leftMax = (rightMax = 0);
+  let leftMax = 0;
+  let rightMax = 0;
   while (left < right) {
     if (height[left] < height[right]) {
       if (leftMax <= height[left]) {
