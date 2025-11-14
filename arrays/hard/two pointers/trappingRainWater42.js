@@ -37,29 +37,28 @@ console.log("Empty Array", trap([])); // 0
 console.log("Single Bar", trap([5])); // 0 (no boundaries)
 
 // Two bars
-console.log("Two Bars", trap([5,1])); // 0 (water can't be trapped)
+console.log("Two Bars", trap([5, 1])); // 0 (water can't be trapped)
 
 // Flat land
-console.log("All Same Height", trap([3,3,3,3])); // 0
+console.log("All Same Height", trap([3, 3, 3, 3])); // 0
 
 // Strictly increasing
-console.log("Increasing Heights", trap([1,2,3,4,5])); // 0
+console.log("Increasing Heights", trap([1, 2, 3, 4, 5])); // 0
 
 // Strictly decreasing
-console.log("Decreasing Heights", trap([5,4,3,2,1])); // 0
+console.log("Decreasing Heights", trap([5, 4, 3, 2, 1])); // 0
 
 // Classic valley
-console.log("Valley Shape", trap([3,0,3])); // 3
+console.log("Valley Shape", trap([3, 0, 3])); // 3
 
 // Multiple valleys
-console.log("Multiple Valleys", trap([0,1,0,2,1,0,1,3,2,1,2,1])); // 6
+console.log("Multiple Valleys", trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1])); // 6
 
 // Deep pit in middle
-console.log("Deep Pit", trap([5,0,0,0,5])); // 15
+console.log("Deep Pit", trap([5, 0, 0, 0, 5])); // 15
 
 // High wall then flat
-console.log("Wall and Flat", trap([4,0,0,0,0])); // 0 (no right boundary)
+console.log("Wall and Flat", trap([4, 0, 0, 0, 0])); // 0 (no right boundary)
 
 // Zig-zag
-console.log("ZigZag", trap([0,2,0,2,0,2])); // 4
-
+console.log("ZigZag", trap([0, 2, 0, 2, 0, 2])); // 4
