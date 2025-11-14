@@ -9,7 +9,6 @@
 // 1st approach: Brute Force
 
 // Intuition:
-// - First elevation must be higher then trailing ones to hold water.
 // - Smaller Boundary is the limiting factor to hold water.
 // - To hold water, an element's left side & right side must be picked & minimum of these must be more than the element.
 // - store total water in a variable.
@@ -19,18 +18,6 @@
 // 2. for each element, min of its (leftMax & rightMax) - element itself will contain the water.
 // 3. res will be iterated as per water contained.
 
-var trapBF = function(height) {
-    let res = 0;
-   
-    for(let i = 0 ; i < height.length; i++){
-         let leftMax=0, rightMax=0;
-        for(let j=0; j<=i; j++){
-            leftMax = Math.max(leftMax, height[j]);
-        }
-        for(let j=i ; j<height.length ; j++){
-            rightMax = Math.max(rightMax, height[j])
-        }
-        res = res + Math.min(leftMax, rightMax) - height[i];
 // Complexity
 // Time: O(n^2)
 // Space: O(1)
