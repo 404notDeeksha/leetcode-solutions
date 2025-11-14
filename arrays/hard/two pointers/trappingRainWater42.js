@@ -52,8 +52,18 @@ var trapBF = function (height) {
   return res;
 };
 
+// ------------------------
+
 // 2nd Approach: Two pointer
 
+// Intuition:
+// The amount of water that can be trapped at any point depends on the minimum of the tallest walls on its left and right.
+// So if the left wall is shorter, the trapped water on that side is final (it won’t change even if the right side moves inward), because any taller wall on the right will only make the minimum stay the same or increase.
+// Hence, move the pointer from the shorter side inward, updating the running max and collecting water as you go.
+
+// Complexity:
+// Time: O(n);
+// Space: O(1)
 
 
 // Edge Cases
