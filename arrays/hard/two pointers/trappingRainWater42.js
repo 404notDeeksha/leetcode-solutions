@@ -65,6 +65,31 @@ var trapBF = function (height) {
 // Time: O(n);
 // Space: O(1)
 
+//Code:
+var trap = function (height) {
+  let water = 0;
+  let left = 0;
+  let right = height.length - 1;
+  let leftMax = (rightMax = 0);
+  while (left < right) {
+    if (height[left] < height[right]) {
+      if (leftMax <= height[left]) {
+        leftMax = height[left];
+      } else {
+        water += leftMax - height[left];
+      }
+      left++;
+    } else {
+      if (rightMax <= height[right]) {
+        rightMax = height[right];
+      } else {
+        water += rightMax - height[right];
+      }
+      right--;
+    }
+  }
+  return water;
+};
 
 // Edge Cases
 
