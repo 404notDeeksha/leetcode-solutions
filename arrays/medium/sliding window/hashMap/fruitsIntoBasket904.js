@@ -1,28 +1,31 @@
-// Leetcode: 904.  Fruits into Basket
+// Leetcode: 904. Fruits into Basket
 // Problem : longest subarray containing at most 2 distinct elements
 // Difficulty: Medium
 
-// Optimised Approach :
-// Using HashMaps;
+// Optimised Approach : HashMaps;
 
-//Approach
-// 1. First, take a new Map to track fruits inside the window (our baskets).
-//    - key = fruit type
-//    - value = count of that fruit in the current window
+// Intuition:
+// We are supposed to maximise a tree type occurence while starting with a certain tree.
+// The maximum repeated trees we can cover, the better.
+
+// Approach
+// 1. First, use Map to track fruits inside the window (our baskets).
+//    - key = fruit type.
+//    - value = count of that fruit in the current window.
 
 // 2. Use one pointer `i` to mark the start of the window 
-//    (the first tree we currently include).
-//    This will help us shrink the window when we exceed 2 fruit types.
+//    - the first tree we currently include.
+//    - This will help us shrink the window when we exceed 2 fruit types.
 
-// 3. Use another pointer  `j`  to explore subsequent trees.
+// 3. Use another pointer `j` to trace subsequent trees.
 //    For each tree, add its fruit to the map and increase its count.
 
 // 4. If the map ever has more than 2 types of fruits, 
-//    start shrinking from the left:
+//    - start shrinking from the left:
 //    - reduce count of fruits[left]
 //    - if count becomes 0, remove that fruit from the map
-//    - then move `i` ahead by 1
-//    Keep shrinking until map.size <= 2
+//    - move `i` ahead by 1
+//    - Keep shrinking until map.size <= 2
 
 // 5. At each step, update the maximum window size (j - i + 1).
 
@@ -49,12 +52,9 @@ var totalFruit = function(fruits) {
           }
           i++;
       }
-  
-      maxLen = Math.max(maxLen, j - i + 1);
+        maxLen = Math.max(maxLen, j - i + 1);
     }
-  
-  
-    return maxLen;
+      return maxLen;
   };
 
 // --------------------------------------------------
