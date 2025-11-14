@@ -2,6 +2,10 @@
 // Difficulty: Hard
 // Pattern : Two pointers
 
+// Problem
+// Given an array of non-negative integer ( 0s & integers) which represent elevation, having width of 1.
+// Return the area captured by elevations & widths.
+
 // 1st approach: Brute Force
 
 // 1. We will use a pointer to iterate through each element of array, & save any element on its left (if its bigger than it) in leftMax, & any element on its right (if its bigger than it) in rightMax. 
