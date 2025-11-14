@@ -30,6 +30,9 @@ var trapBF = function(height) {
             rightMax = Math.max(rightMax, height[j])
         }
         res = res + Math.min(leftMax, rightMax) - height[i];
+// Complexity
+// Time: O(n^2)
+// Space: O(1)
     }
 return res;
 };
