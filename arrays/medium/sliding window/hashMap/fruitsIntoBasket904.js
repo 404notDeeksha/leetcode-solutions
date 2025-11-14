@@ -7,6 +7,7 @@
 // Intuition:
 // We are supposed to maximise a tree type occurence while starting with a certain tree.
 // The maximum repeated trees we can cover, the better.
+// There can only be 2 unique trees throughout.
 
 // Approach
 // 1. First, use Map to track fruits inside the window (our baskets).
