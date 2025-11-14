@@ -34,8 +34,22 @@ var trapBF = function(height) {
 // Complexity
 // Time: O(n^2)
 // Space: O(1)
+
+var trapBF = function (height) {
+  let res = 0;
+
+  for (let i = 0; i < height.length; i++) {
+    let leftMax = 0,
+      rightMax = 0;
+    for (let j = 0; j <= i; j++) {
+      leftMax = Math.max(leftMax, height[j]);
     }
-return res;
+    for (let j = i; j < height.length; j++) {
+      rightMax = Math.max(rightMax, height[j]);
+    }
+    res = res + Math.min(leftMax, rightMax) - height[i];
+  }
+  return res;
 };
 
 // 2nd Approach: Two pointer
