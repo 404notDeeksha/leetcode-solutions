@@ -31,6 +31,7 @@ var isHappy = function (n) {
   let slow = n;
   let fast = sumOfSquares(n);
 
+  //Detect cycle
   while (fast !== 1 && fast !== slow) {
     slow = sumOfSquares(slow);
     fast = sumOfSquares(sumOfSquares(fast));
