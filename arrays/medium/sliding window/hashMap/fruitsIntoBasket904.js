@@ -2,7 +2,7 @@
 // Problem : longest subarray containing at most 2 distinct elements
 // Difficulty: Medium
 
-// Optimised Approach : HashMaps;
+// Optimised Approach : Sliding window + HashMaps;
 
 // Intuition:
 // We are supposed to maximise a tree type occurence while starting with a certain tree.
