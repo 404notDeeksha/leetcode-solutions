@@ -1,7 +1,11 @@
-// 75. Sort Colors
-// Dutch National Flag algorithm
+// 75. Sort Colors:  Dutch National Flag algorithm
 // Two Pointers pattern (extended to three pointers).
-// Specifically designed for in-place partitioning problems.
+// Specifically designed for in-place partitioning problems with three fixed pointers.
+
+// Problem:
+// - Given an array where elements represent objects.
+// - Contains 3 colors as 0, 1, 2.
+// - All colors of similiar type must be sorted from start to end.
 
 //  APPROACH:
 // 1. Placement of 0s, 1s & 2s are made to fit blocks in arrays.
@@ -39,6 +43,8 @@ var sortColors = function (nums) {
 
   return nums;
 };
+
+// Edge cases:
 
 // ✅ Base Example
 let arr1 = [2, 0, 2, 1, 1, 0];
