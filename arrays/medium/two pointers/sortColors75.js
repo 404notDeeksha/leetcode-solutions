@@ -7,6 +7,12 @@
 // - Contains 3 colors as 0, 1, 2.
 // - All colors of similiar type must be sorted from start to end.
 
+// Intuition:
+// - Point low & high to start & end of array.
+// - They mark positions where swapping will be done.
+// - Mid pointer will move from low to high positions in array.
+// - It will access which elements shall be swapped.
+
 //  APPROACH:
 // 1. Placement of 0s, 1s & 2s are made to fit blocks in arrays.
 // 2. We use 3 pointers:
