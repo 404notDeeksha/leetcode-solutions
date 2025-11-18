@@ -46,6 +46,7 @@ var minSubArrayLen = function(target, nums) {
     }
 
     return length===Number.MAX_VALUE? 0: length;
+    
 };
 
 // Edge cases 

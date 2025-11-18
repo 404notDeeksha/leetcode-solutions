@@ -37,6 +37,11 @@ var findMaxLength = function (nums) {
   }
   return maxLen;
 };
+// len = 6
+// {0: 5, -1: 4, -2: 3,   }
+// sum = -1+1-1-1+1+1
+// [0 1 0 0 1 1 0 1 0 1]
+// Edge cases:
 
 console.log("Balance in the Middle",findMaxLength([0, 1, 0, 0, 1, 1, 0, 1, 0, 1]));     //10
 console.log("Multiple Equal-Length Balanced Subarrays",findMaxLength([0, 1, 0, 1, 0, 1]));     //6

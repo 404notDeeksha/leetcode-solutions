@@ -1,5 +1,5 @@
 // Leetcode: 904. Fruits into Basket
-// Problem : longest subarray containing at most 2 distinct elements
+// Problem : Longest subarray containing at most 2 distinct elements
 // Difficulty: Medium
 
 // Optimised Approach : Sliding window + HashMaps;
