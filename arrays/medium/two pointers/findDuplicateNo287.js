@@ -12,6 +12,15 @@
 // # Intuition
 // Find duplicate number in an array of n integers where each integer is between 1 and n (inclusive).
 
+// Approach:
+// 1. Problem needs two pointers.
+// 2. One part of problem will detect presence of cycle with slow & fast pointers.
+//    - whenever slow & fast pointer meet, repeatation is present.
+// 3. Another part of problem will detect start of cycle. 
+//    - initialise slow with start of array. 
+//    - run slow & fast parallely now.
+// 4. Return slow pointer. 
+
 // Code -
 var findDuplicateOpt = function(nums) {
     let slow = nums[0];
@@ -29,7 +38,6 @@ var findDuplicateOpt = function(nums) {
         slow = nums[slow];
         fast = nums[fast];
     }
-
     return slow;
 };
 
