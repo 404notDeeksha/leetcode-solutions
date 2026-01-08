@@ -2,6 +2,13 @@
 // Difficulty: Medium
 // Implementation: Prefix sum & HashMap
 
+// Problem:
+// Given a binary array, return maxlen of a contiguous subarray with equal nos of 0s & 1s.
+
+// Intuition:
+// Treat 0s as -1s & evaluate sum.
+// whenever sum is 0, max length of that subarray is returned.
+
 // Approach:
 // Given an array of 0s and 1s, we need to find the longest contiguous subarray with equal number of 0s and 1s.
 // We can replace 0 with -1, so the problem becomes finding the longest contiguous subarray with sum 0.
@@ -13,14 +20,11 @@
 // If we find the same prefix sum again, it means the subarray between the two indices has sum 0.
 // We can calculate the length of this subarray and update the maximum length if it is greater than the previous maximum length.
 
-//Complexity:
+// Complexity:
 // Time: O(n), where n is the length of the input array.
 // Space: O(n), for the hashmap to store prefix sums and their indices.
-/**
- * @param {number[]} nums
- * @return {number}
- */
 
+// Code:
 var findMaxLength = function (nums) {
   let map = new Map();
   map.set(0, -1);
@@ -41,6 +45,7 @@ var findMaxLength = function (nums) {
 // {0: 5, -1: 4, -2: 3,   }
 // sum = -1+1-1-1+1+1
 // [0 1 0 0 1 1 0 1 0 1]
+
 // Edge cases:
 
 console.log("Balance in the Middle",findMaxLength([0, 1, 0, 0, 1, 1, 0, 1, 0, 1]));     //10
