@@ -5,6 +5,11 @@
 // Problem:
 // Given an array of integers. Find three elements whose sum must be equal to 0.
 
+// Intuition:
+// Sorting whole array first will move left & right pointers move with ease.
+// Sum of any three integers is done & compared with 0
+// All same adjacent integers must be skipped. 
+
 // Approach:
 // We can use the two pointers approach to solve this problem.
 // First, we sort the array to make it easier to find triplets that sum to zero.
@@ -26,7 +31,7 @@
     // it will atleast take n2 complexity
     // skipping same numbers, use continue. dont use while loop inside for loop. let for loop do the iteration work
     // dont skip left if nums[left] & nums[i] are same.
-    // skip left or right after checking valid pairs
+    // skip left or right after checking valid pairs & upon incrementation or decrementation
 
 var threeSum = function(nums) {
     
@@ -53,7 +58,7 @@ var threeSum = function(nums) {
             } else 
             if(sum<0){
                left++;         
-            }else{
+            }else if(sum > 0){
                 right--;
             }
         }        
