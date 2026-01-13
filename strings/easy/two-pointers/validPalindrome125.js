@@ -48,7 +48,7 @@ var isPalindrome = function (s) {
 
 //use const for helper functions if we arent reassigning
 const isAlphaNum = (char) => {
-  let regex = /^[a-z0-9]$/;
+  let regex = /[a-z0-9]/;
   return regex.test(char);
 };
 
