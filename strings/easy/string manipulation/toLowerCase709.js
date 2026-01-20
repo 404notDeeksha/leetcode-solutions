@@ -10,7 +10,6 @@
 // 3. Push all char to a new Array.
 // 4. Return array after joining it.
 
-
 // Complexity:
 // Time : O(n)
 // Space: O(n)
