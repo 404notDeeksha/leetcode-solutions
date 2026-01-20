@@ -22,4 +22,20 @@
 
 2. "String.fromCharCode()" takes one or more Unicode values (numbers) and returns the corresponding character or sequence of characters as a string.  String is keyword here.
 
-3. 
+---
+
+### Track spaces in Strings:
+
+1. s.indexOf(" ") - returns index of 1st occurence of space in sentence.
+2. str.lastIndexOf(' ') - returns index of last occurence of space in sentence.
+3. if (str[i] === ' '){}
+
+- Whitespaces : \n → newline; \t → tab; \r → carriage return; Unicode spaces (non-breaking space, etc.)
+
+- s.trim() can remove starting & trailing whitespaces only.
+eg:
+"  Hello   World  ".trim()
+// "Hello   World"
+
+---
+
