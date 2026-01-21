@@ -11,8 +11,16 @@
 - ASCII CODE : 
     -   0 to 9 : 48 to 57
     -   a to z : 97 to 122
-    -   A to Z : 65 to 90    
+    -   A to Z : 65 to 90   
 
+- Whitespaces : \n → newline; \t → tab; \r → carriage return; Unicode spaces (non-breaking space, etc.)
+
+- s.trim() can remove starting & trailing whitespaces only.
+```js
+eg:
+"  Hello   World  ".trim()
+// "Hello   World"     
+```
 ---
 
 ### String Functions:
@@ -30,12 +38,7 @@
 2. str.lastIndexOf(' ') - returns index of last occurence of space in sentence.
 3. if (str[i] === ' '){}
 
-- Whitespaces : \n → newline; \t → tab; \r → carriage return; Unicode spaces (non-breaking space, etc.)
 
-- s.trim() can remove starting & trailing whitespaces only.
-eg:
-"  Hello   World  ".trim()
-// "Hello   World"
 
 ---
 
