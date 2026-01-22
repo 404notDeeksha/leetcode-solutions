@@ -1,5 +1,5 @@
 // Leetcode Problem 709: To LowerCase
-// Implementation - string manipulation
+// Implementation - Traversal + string manipulation
 // Strings are immutable
 
 // Approach:

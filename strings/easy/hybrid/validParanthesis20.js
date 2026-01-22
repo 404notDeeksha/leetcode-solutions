@@ -1,5 +1,6 @@
 // Leetcode Problem 20: Valid Paranthesis
-// Implementation - stack
+// Implementation - stack + pattern matching
+
 
 // Approach:
 // 1. Here every last opening bracket type must have a closing bracket in same order.
