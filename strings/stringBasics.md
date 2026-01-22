@@ -1,5 +1,18 @@
 ---
 
+### Patterns of Strings:
+
+1️⃣ Traversal
+2️⃣ Transformation/ Manipulation
+3️⃣ Frequency 🔥
+4️⃣ Two Pointers
+5️⃣ Sliding Window
+6️⃣ Validation
+7️⃣ Sorting
+8️⃣ Prefix/Suffix
+9️⃣ Parsing
+🔟 Hybrid
+
 ### String Basics
 
 ---
