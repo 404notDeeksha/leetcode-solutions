@@ -52,3 +52,24 @@ console.log("Proper noun:", detectCapitalUse("India"));           // true
 console.log("Acronym-like:", detectCapitalUse("NASA"));           // true
 console.log("Sentence-style word:", detectCapitalUse("OpenAI"));  // false
 
+// Approach #2: Using Js functions
+// 1. Here we will only check for true conditions.
+// 2. If all are Uppercase, return true.
+// 3. If all are toLowerCase, return true.
+// 4. If FirstChar is upeercase & trailing ones are lowercase, return true.
+// 5. Return false if none of above conditions are met. 
+
+// Complexity:
+// Time : O(n) => word.toUpperCase(), word.toLowerCase, word.slice(1).toLowerCase() : O(n)
+// Space: O(1)
+
+var detectCapitalUse2 = function(word) {
+    if (word === word.toUpperCase()) return true;
+    if (word === word.toLowerCase()) return true;
+    if (
+        word[0] === word[0].toUpperCase() &&
+        word.slice(1) === word.slice(1).toLowerCase()
+    ) return true;
+
+    return false;
+};
