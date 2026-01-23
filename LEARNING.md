@@ -4,6 +4,9 @@
 - Read Question wrong. (assumed that question asked subarray in arrays-3sum problem) 😱.
 - Loop syntax : for(let i=0; i<nums.length; i++>) gives i as Number
               : for(let i in nums) gives i as String 
+- In case of questions where return value must be boolean, check what gives quickest exit, checking for truths or falses. put that consition forward.
+
+
 
 **CASES TO CHECKOUT ALPHANUMERIC CHARACTERS**
 
