@@ -51,4 +51,8 @@ console.log("Repeated characters:", checkIfPangram("aaaaaaaaaaaaaaaaaaaaaaaaaa")
 console.log("Valid pangram:", checkIfPangram("thequickbrownfoxjumpsoverthelazydog")); 
 // true
 
+// Simpler & readable solution
 
+var checkIfPangram2 = function(sentence) {
+    return new Set(sentence).size === 26;
+};
