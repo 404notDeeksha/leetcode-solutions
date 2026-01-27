@@ -7,12 +7,12 @@
 // Complexity:
 
 // Time Complexity: O(n)
-// Space Complexity: O(1).
+// Space Complexity: O(n).
 
 var firstUniqChar = function(s) {
     let map = new Map();
-    for(let char in s){
-        map.set(char, (map.get() || 0) + 1);
+    for(let char of s){
+        map.set(char, (map.get(char) || 0) + 1);
     }
 
     for(let i=0; i<s.length; i++){
@@ -22,8 +22,6 @@ var firstUniqChar = function(s) {
     }
     return -1;
 }
-
-
 
 // ---
 
@@ -54,7 +52,13 @@ var firstUniqChar = function(s) {
             }
         }
 
-        if (isUnique) return i;
-    }
-    return -1;
-};
+console.log("Empty string:", firstUniqChar(""));
+console.log("Single character:", firstUniqChar("a"));
+console.log("All repeating:", firstUniqChar("aabbcc"));
+console.log("First is unique:", firstUniqChar("leetcode"));
+console.log("Middle unique:", firstUniqChar("loveleetcode"));
+console.log("Last unique (critical):", firstUniqChar("aaab"));
+console.log("Multiple uniques:", firstUniqChar("abacddbec"));
+console.log("Late unique:", firstUniqChar("aaaaaaaaab"));
+console.log("All same char:", firstUniqChar("zzzzzz"));
+console.log("Mixed case / symbols (Map version only):", firstUniqChar("aA!a"));
