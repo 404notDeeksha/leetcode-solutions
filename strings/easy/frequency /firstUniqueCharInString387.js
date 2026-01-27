@@ -1,6 +1,31 @@
 // Leetcode: 387: First Unique Character in String.
 // Difficulty: Easy
-// Approach: Traversal + frequency mapping
+// Intuition: Traversal + frequency mapping
+
+// Approch - Optimised
+
+// Complexity:
+
+// Time Complexity: O(n)
+// Space Complexity: O(1).
+
+var firstUniqChar = function(s) {
+    let map = new Map();
+    for(let char in s){
+        map.set(char, (map.get() || 0) + 1);
+    }
+
+    for(let i=0; i<s.length; i++){
+        if(map.get(s[i]) === 1){
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+
+// ---
 
 // Approach: BRUTE FORCE
 // 1. Lets go with Iteration & flag mapping.
