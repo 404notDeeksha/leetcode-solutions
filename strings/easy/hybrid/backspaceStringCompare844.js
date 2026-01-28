@@ -1,8 +1,9 @@
 //Leetcode 844. Backspace String Compare
 // Difficulty: Easy
-// Approach: Stack
+// Intuition: Stack 
+// - Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character
 
-//Intuition:
+// Approach:
 // We can use a stack to pop char which falls before '#' symbol.
 // we will iterate over a string & push its char into stack.
 // If we encounter '#' symbol, last element of stack shall be deleted.
@@ -19,6 +20,7 @@ var backspaceCompare = function (s, t) {
     return false;
   }
 };
+
 const stack = (str) => {
   let stack = [];
   for (let char of str) {
