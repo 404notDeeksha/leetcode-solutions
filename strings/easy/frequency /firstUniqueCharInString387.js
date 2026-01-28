@@ -7,7 +7,7 @@
 //  1. Add a map to count char with their frequency of occurance.
 //  2. Add all char to map.
 //      - add their frequency.
-//  3. Iterate again. if freq of any char is 1, return index.
+//  3. Iterate again. if freq of first char occurence is 1, return index.
 //  4. Return -1 if no char has 1 as freq.
 
 // Complexity:
