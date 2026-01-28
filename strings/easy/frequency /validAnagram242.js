@@ -2,6 +2,17 @@
 // Difficulty: Easy
 // Intuition: Hashmap - An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, using all the original letters exactly once.
 
+// Approach - Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+// 1. If lengths of 2 strings isnt equal, it is not an anagram.
+// 2. Put all char of s in a map with freq.
+// 3. Iterate t .
+        // - check if char in t is present in map.
+        // - if it isnt, return false.
+        // - reduce relevant freq. in map if char in t is matched in map.
+        // - if freq becomes 0, delete that entry from map.
+// 4. return true if map size becomes 0.       
+
+
 // Complexity:
 
 // Time Complexity: O(n)
