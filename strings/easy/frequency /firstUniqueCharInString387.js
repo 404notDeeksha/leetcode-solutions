@@ -47,21 +47,21 @@ var firstUniqChar = function(s) {
 // Time Complexity: O(n2)
 // Space Complexity: O(1).
 
-// var firstUniqCharBF = function(s) {
-//     for (let i = 0; i < s.length; i++) {
-//         let isUnique = true;
+var firstUniqCharBF = function(s) {
+    for (let i = 0; i < s.length; i++) {
+        let isUnique = true;
 
-//         for (let j = 0; j < s.length; j++) {
-//             if (i !== j && s[i] === s[j]) {
-//                 isUnique = false;
-//                 break;
-//             }
-//         }
+        for (let j = 0; j < s.length; j++) {
+            if (i !== j && s[i] === s[j]) {
+                isUnique = false;
+                break;
+            }
+        }
 
-//         if (isUnique) return i;
-//     }
-//     return -1;
-// };
+        if (isUnique) return i;
+    }
+    return -1;
+};
 
 console.log("Empty string:", firstUniqChar(""));
 console.log("Single character:", firstUniqChar("a"));
