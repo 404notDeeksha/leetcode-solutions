@@ -19,7 +19,7 @@
 
 - str.length : gives length like an array of string.
 
-- str.trim(): removes all whitespaces from string. Can also check if string is empty or not. `emptyStr.trim() === ''`
+- str.trim(): removes all whitespaces from string from start & end. Can also check if string is empty or not. `emptyStr.trim() === ''`
 
 - ASCII CODE : 
     -   0 to 9 : 48 to 57
@@ -29,6 +29,7 @@
 - Whitespaces : \n → newline; \t → tab; \r → carriage return; Unicode spaces (non-breaking space, etc.)
 
 - s.trim() can remove starting & trailing whitespaces only.
+
 ```js
 eg:
 "  Hello   World  ".trim()
@@ -49,9 +50,7 @@ eg:
 
 1. s.indexOf(" ") - returns index of 1st occurence of space in sentence.
 2. str.lastIndexOf(' ') - returns index of last occurence of space in sentence.
-3. if (str[i] === ' '){}
-
-
+3. if (str[i] === ' '){}  //checks space
 
 ---
 
