@@ -32,14 +32,12 @@ var romanToInt = function (s) {
     M: 1000,
   };
   let number = 0;
-  let j = -1;
   for (let i = 0; i < s.length; i++) {
     if (i < s.length - 1 && map[s[i]] < map[s[i + 1]]) {
       number -= map[s[i]];
     } else {
       number += map[s[i]];
     }
-    j++;
   }
   return number;
 };
