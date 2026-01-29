@@ -2,7 +2,7 @@
 // Difficulty: Easy
 // Approach: Map + Iteration
 
-// Problem
+// Problem:
 // Given a roman numeral as string, return its number form.
 
 // Intuition + Trick:
@@ -10,11 +10,12 @@
 // In opposite cases, Smaller Roman is subtracted from larger Roman.
 
 // Approach:
-// 1. Create a map of Roman Numerals.
+// 1. Create a map of Roman Numerals - I, V, X, L, C, D, M.
 // 2. Iterate the string.
-//      - Check if string has more than one character left to iterate.
+//      - Since we have to check two neighbouring digits, we must go uptill s.length-1.
 //      - if next character is greater than current one, subtract current from total.
 //      - else add current to total.
+// 3. Return number.
 
 // Complexity:
 // Time complexity: O(n) where n is the length of the string.
