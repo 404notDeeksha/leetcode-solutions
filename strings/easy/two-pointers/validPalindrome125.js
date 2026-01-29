@@ -82,11 +82,11 @@ var isPalindromeOptimized = function (s) {
   return true;
 };
 
-// const isAlphaNum2 = (char) => {
-//  return /[a-z0-9]/.test(char);
-// }
+const isAlphaNum2 = (char) => {
+ return /[a-z0-9]/.test(char);
+}
 
-//-----------------------------------
+// ------
 
 //3rd Solution: less optimum
 
@@ -112,6 +112,52 @@ var isPalindrome = function (s) {
   }
   return true;
 };
+
+//  --------
+
+// 4th Solution:  Very Concised -
+
+// var isPalindrome = function(s) {
+//   let clean = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+//   let reverse = clean.split("").reverse().join("");
+//   return clean === reverse;
+// };
+
+//  --------
+
+// 5th Solution: 
+
+// var isPalindrome = function(s) {
+//   var left = 0;
+//   var right = s.length - 1;
+//   while (left < right) {
+//       // skim the non-alphanumeric from left
+//       while(left < right && !isAlphanumeric(s[left])){
+//           left++;
+//       }
+//       // skim the non-alphanumeric from right
+//       while(left < right && !isAlphanumeric(s[right])) {
+//           right--;
+//       }
+//       if(s[left].toLowerCase() !== s[right].toLowerCase()) {
+//           return false;
+//       }
+//       left++;
+//       right--;
+//   }
+//   return true;
+  
+// };
+
+// var isAlphanumeric = function(char) {
+//   var code = char.charCodeAt(0);
+//   // 48-58 - 0-9
+//   // 65-90 - A-Z
+//   // 97-122 - a-z
+//   return ((code >=48 && code<=57) ||
+//   (code>=65 && code<=90) ||
+//   (code>=97 && code<=122))
+// }
 
 console.log(isPalindrome("race a car")); // false
 console.log(isPalindrome("A man a plan a canal Panama")); // true
