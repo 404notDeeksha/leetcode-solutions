@@ -49,7 +49,7 @@ console.log("Tabs and spaces mixed:", lengthOfLastWord("Hello\tWorld   "));
 // Expected: 5 (if only space ' ' is considered a separator)
 
 console.log("Special characters:", lengthOfLastWord("Hello @World!")); 
-// Expected: 6
+// Expected: 7
 
 console.log("Unicode characters:", lengthOfLastWord("नमस्ते दुनिया")); 
 // Expected: 6
