@@ -1,5 +1,11 @@
 //Leetcode #392. Is Subsequence
-// Implementation: Two pointerEvents:
+// Implementation: Two pointers
+
+// Approach -
+// 1. Two pointers shall move in s & t strings.
+// 2. Iterate both. 
+//    - We shall compare if char in t is also present in s.
+// 3. At end of loop, if pointer in s reaches s.length, it is true. 
 
 // Complexity:
 // Time: O(n)
