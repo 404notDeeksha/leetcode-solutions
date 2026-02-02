@@ -13,9 +13,9 @@
 9️⃣ Parsing
 🔟 Hybrid
 
-### String Basics
-
 ---
+
+### String Basics:
 
 - str.length : gives length like an array of string.
 
@@ -35,10 +35,10 @@ eg:
 "  Hello   World  ".trim()
 // "Hello   World"     
 ```
+
 ---
 
 ### String Functions:
----
 
 1. "str.charCodeAt( index )" method in JavaScript returns the UTF-16 code unit (an integer between 0 and 65535) of the character at a specified index in a string. 
 
