@@ -21,6 +21,8 @@ A quick guide to regular expressions for beginners, with practical examples.
 | `\s`        | Whitespace                       | `a\sb` matches `a b`          |
 | `\S`        | Non-whitespace                   | `a\Sb` matches `a-b`, `a1b`   |
 
+> ^ W D S are negations
+
 ---
 
 ## 2. 🔢 Quantifiers
@@ -49,6 +51,7 @@ A quick guide to regular expressions for beginners, with practical examples.
 let RegEx = /^[12346][0-9]{5}$/;
 //or
 let RegEx = /^[12346]\d{5}$/;
+
 // ^ makes sure start of number must have either of these digits - [12346]
 // [0-9] makes sure that after 1st digit, rest 5 digits `{5}` can be of any number between 0-9
 // $ ensures after 5 digits, number must reach end. No more digits are allowed.
@@ -58,7 +61,7 @@ let RegEx = /^[12346]\d{5}$/;
 
 ## 4. 📦 Groups and Alternation
 
-| Pattern       | Meaning                     | Example Match                         |
+| Pattern       | Meaning                      | Example Match                          |
 |---------------|------------------------------|----------------------------------------|
 | `(abc)`       | Capturing group              | `(cat|dog)` matches `cat` or `dog`     |
 | `a|b`         | a or b                       | `a|b` matches `a` or `b`               |
