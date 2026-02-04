@@ -19,6 +19,9 @@
 //      - if next meeting starts before current meeting can end, we will return false.
 // If no such meeting interval exists, return true.
 
+// Take away:
+// - Runtime err shall appear in case loop length runs over & reaches more than array length: intervals[i+1][0] = undefined.
+
 // Complexity:
 // Time complexity: O(n log n) for sorting + O(n) for checking overlaps = O(n log n)
 // Space complexity: O(1)

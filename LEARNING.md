@@ -6,8 +6,6 @@
               : for(let i in nums) gives i as String 
 - In case of questions where return value must be boolean, check what gives quickest exit, checking for truths or falses. put that consition forward.
 
-
-
 **CASES TO CHECKOUT ALPHANUMERIC CHARACTERS**
 
 <!-- Q.  -->
@@ -61,4 +59,18 @@ const isAlphaNum = (char) => {
 - It skips the rest of the current loop iteration and moves to the next iteration.
 - When to use:
 - When you want to ignore certain cases but still keep the loop running.
+
+**REDUCE FUNCTION**:
+```js
+const nums = [3, 10, 6, 20, 4];
+
+const max = nums.reduce((acc, cur) => {
+  return cur > acc ? cur : acc;
+}, nums[0]);
+
+console.log(max); // 20
+```
+
+- In reduce, the accumulator is not a fixed variable — it is reassigned on every iteration to whatever you return.
+
 

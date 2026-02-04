@@ -22,10 +22,6 @@
 // - The space complexity is constant, as we are not using any extra space for the array.
 
 // Code
-/**
- * @param {number[]} nums
- * @return {number}
- */
 var pivotIndex = function (nums) {
   let total = nums.reduce((acc, val) => acc + val, 0);
   let leftSum = 0;
