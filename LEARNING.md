@@ -2,9 +2,9 @@
 
 ---
 
-## 1. Reading Mistakes
+## 1. Reading the Question Wrong
 
-- Read Question wrong. (assumed that question asked subarray in arrays-3sum problem) 😱.
+- eg: assumed that question asked subarray in arrays-3sum problem 😱.
 
 ---
 
@@ -18,7 +18,7 @@
 ## 3. Boolean Return Optimization
 
 - In case of questions where return value must be boolean, check what gives quickest exit, checking for truths or falses.  
-- put that consition forward.
+- put that condition first.
 
 ---
 
@@ -100,3 +100,4 @@ console.log(max); // 20
 ```
 
 - In reduce, the accumulator is not a fixed variable — it is reassigned on every iteration to whatever you return.
+- acc → accumulator (current max so far) , cur → current element in iteration
