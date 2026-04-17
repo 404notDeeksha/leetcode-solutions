@@ -4,13 +4,19 @@
 
 // Problem - "Meeting Rooms," is an easy-level problem that asks you to determine if a person can attend all meetings given a list of intervals, where each interval is a [start, end] pair. The condition for attending all meetings is that no two meetings overlap in time. If there is any overlap, the function should return false; otherwise, it should return true.
 
+// ---
+
 // Problem :
 // Given time intervals of meetings, we must analyze a person can attend all meetings or not.
 // All meetings can only be attended if ending time of a meeting is before start time of next meeting.
 
+// ---
+
 // Intuition:
 // We can sort the intervals based on the start time and then check if any two intervals overlap, by comparing end time & start time of two consecutive intervals.
 // If any two intervals overlap, it means the person cannot attend all meetings.
+
+// ---
 
 // Approach:
 // If intervals array length is `0` or `1`, return true.
@@ -19,12 +25,18 @@
 //      - if next meeting starts before current meeting can end, we will return false.
 // If no such meeting interval exists, return true.
 
+// ---
+
 // Take away:
 // - Runtime err shall appear in case loop length runs over & reaches more than array length: intervals[i+1][0] = undefined.
+
+// ---
 
 // Complexity:
 // Time complexity: O(n log n) for sorting + O(n) for checking overlaps = O(n log n)
 // Space complexity: O(1)
+
+// ---
 
 // Code
 var canAttendMeetings = function (intervals) {
