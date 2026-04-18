@@ -32,7 +32,7 @@ var maxProfit = function(prices) {
         let diff=prices[j]-prices[i];
 
         if(diff<0){
-            i=j
+            i=j             // Main essence. Also two loops are not needed
             }
         else
         {
