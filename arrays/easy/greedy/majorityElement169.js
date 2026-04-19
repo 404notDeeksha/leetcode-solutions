@@ -42,3 +42,20 @@ var majorityElement = function(nums) {
     return candidate;
 };
 
+// Edge cases:
+
+console.log("Single element:", majorityElement([5])); // 5
+
+console.log("All same elements:", majorityElement([2, 2, 2, 2])); // 2
+
+console.log("Majority at start:", majorityElement([3, 3, 4, 2, 3])); // 3
+
+console.log("Majority at end:", majorityElement([1, 2, 3, 3, 3])); // 3
+
+console.log("Majority in middle:", majorityElement([1, 2, 2, 2, 3])); // 2
+
+console.log("Negative numbers:", majorityElement([-1, -1, -1, 2, 3])); // -1
+
+console.log("Mixed positive & negative:", majorityElement([-1, 2, -1, -1, 3])); // -1
+
+console.log("Large array with clear majority:", majorityElement([1,1,1,2,3,1,4,1,1])); // 1
