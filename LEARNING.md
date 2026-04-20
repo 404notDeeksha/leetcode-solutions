@@ -50,7 +50,7 @@ const isAlphaNum = (char) => {
 
 ---
 
-## 6. Check Duplicates
+## 6. 🔥🔥Check Duplicates🔥🔥
 
 - Floyd' Detection Cycle : Time O(n), Space O(1)  
 - Negation Marking : Array Modify  
