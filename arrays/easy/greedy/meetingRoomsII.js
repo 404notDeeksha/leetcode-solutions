@@ -1,18 +1,19 @@
 // Problem:  Given an array of meeting time intervals intervals where
 // intervals[i] = [start_i, end_i], determine the minimum number of conference rooms required.
 
-const minConferenceRooms = (intervals) => {
-  const start = intervals.map((i) => i[0]).sort((a, b) => a - b);
-  const end = intervals.map((i) => i[1]).sort((a, b) => a - b);
-  let endPtr = 0;
-  let rooms = 0;
 
+
+const minConferenceRooms = (intervals) => {
+  const start = intervals.map((i) => i[0]).sort((a, b) => a - b);  // a meeting begins
+  const end = intervals.map((i) => i[1]).sort((a, b) => a - b);  // a meeting ends
+  let endPtr = 0;  // tracks earliest meeting that ends
+  let rooms = 0;   
 
   for (let i = 0; i < start.length; i++) {
-    if (start[i] <= end[endPtr]) {
+    if (start[i] <= end[endPtr]) {  // new meeting starts before the earliest one ends, needs a new room
       rooms++;
-    } else {
-      endPtr++;
+    } else {        // meeting has already ended before this one starts
+      endPtr++;         // so, free the room
     }
   }
   return rooms;
