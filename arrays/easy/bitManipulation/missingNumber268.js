@@ -10,9 +10,7 @@
 // 1. All numbers from 0 → n
 // 2. All elements present in the array
 //
-// Since a ^ a = 0 and a ^ 0 = a, all numbers that appear in both sets
-// will cancel out. The only number that does not have a pair (i.e., the missing one)
-// will remain at the end.
+// Since a ^ a = 0 and a ^ 0 = a, all numbers that appear in both sets will cancel out. The only number that does not have a pair (i.e., the missing one)will remain at the end.
 //
 // XOR works here because:
 // - Every number appears exactly once in the full range [0, n]
@@ -24,24 +22,11 @@
 // 2. Traverse the array using index i from 0 → n-1:
 //    a. XOR both index and value → xor ^= i ^ nums[i]
 // 3. After traversal, 'xor' will contain the missing number.
+// 4. ^= must be without space.
 //
 // Complexity:
 // Time Complexity: O(n)
 // Space Complexity: O(1)
-
-// a ^ 0 = a
-// 0 ^ a = a
-// a ^ a = 0
-// XOR works on binary representation:
-// 1 → 01
-// 2 → 10
-
-// Now apply XOR (bit by bit):
-//   01
-// ^ 10
-// -----
-//   11
-// 11 (binary) = 3 (decimal)
 
 // code:
 var missingNumber = function (nums) {
