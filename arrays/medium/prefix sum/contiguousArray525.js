@@ -1,4 +1,11 @@
-//Leetcode 525. Contiguous Array
+// Pattern: Prefix Sum + HashMap
+// Trigger: "subarray sum = k"
+// Key Idea: sum - k seen before
+// Mistake I made: forgot map.set(0,1)
+
+// -------------
+
+// Leetcode 525. Contiguous Array
 // Difficulty: Medium
 // Implementation: Prefix sum & HashMap
 
@@ -15,7 +22,9 @@
 // now, Problem becomes easy when all 0 are replaced with -1
 // so its now, find longest subarray with sum 0
 // We can use prefix sum and hashmap to solve this problem.
-// We will keep track of the prefix sum and its index in a hashmap.
+
+// => Keep track of the prefix sum and its index in a hashmap.
+
 // Instead of actually updating 0 elements to -1, we will use -1 in place of 0 while calculating sum.
 // If we find the same prefix sum again, it means the subarray between the two indices has sum 0.
 // We can calculate the length of this subarray and update the maximum length if it is greater than the previous maximum length.
@@ -48,12 +57,16 @@ var findMaxLength = function (nums) {
 
 // Edge cases:
 
-console.log("Balance in the Middle",findMaxLength([0, 1, 0, 0, 1, 1, 0, 1, 0, 1]));     //10
-console.log("Multiple Equal-Length Balanced Subarrays",findMaxLength([0, 1, 0, 1, 0, 1]));     //6
-console.log("Early Balance, Then Imbalance", findMaxLength([0, 1, 0]));    //2
-console.log("Empty array", findMaxLength([]));    //0
-console.log("All Zeroes", findMaxLength([0,0,0,0,0,0]));    //0
-console.log("All Ones", findMaxLength([1,1,1,1,1]));    //0
-console.log("Balanced Only at the End", findMaxLength([1,1,1,0,0,0]));    //6
-
-
+console.log(
+  "Balance in the Middle",
+  findMaxLength([0, 1, 0, 0, 1, 1, 0, 1, 0, 1])
+); //10
+console.log(
+  "Multiple Equal-Length Balanced Subarrays",
+  findMaxLength([0, 1, 0, 1, 0, 1])
+); //6
+console.log("Early Balance, Then Imbalance", findMaxLength([0, 1, 0])); //2
+console.log("Empty array", findMaxLength([])); //0
+console.log("All Zeroes", findMaxLength([0, 0, 0, 0, 0, 0])); //0
+console.log("All Ones", findMaxLength([1, 1, 1, 1, 1])); //0
+console.log("Balanced Only at the End", findMaxLength([1, 1, 1, 0, 0, 0])); //6
