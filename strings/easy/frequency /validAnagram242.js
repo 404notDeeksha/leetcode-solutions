@@ -61,7 +61,23 @@ var isAnagram = function(s, t) {
 
 // above wont work bcz map are non primitive data types, stored by reference: two seperately created maps are never equal.
 
-// ---
+// --- Another Approach
+
+// var isAnagram = function(s, t) {
+//     if(s.length !== t.length) return false;
+
+//     let sArr = new Array(26).fill(0);
+//     let tArr = new Array(26).fill(0);
+
+//     for(let i=0; i<s.length; i++){
+//         sArr[s.charCodeAt(i) - 97]++;
+//         tArr[t.charCodeAt(i) - 97]++;
+//     }
+//     for(let i=0; i<sArr.length; i++){
+//         if(sArr[i] !== tArr[i]) return false;
+//     }
+//     return true;
+// };
 
 // ✅ Basic true cases
 console.log("simple true", isAnagram("anagram", "nagaram")); // true
