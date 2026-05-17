@@ -42,6 +42,27 @@ var isAnagram = function(s, t) {
     
 };
 
+// --- mental model
+
+// function createMap(str){
+//     let map = new Map();
+//     for(let i=0; i<str.length; i++){        
+//         map.set(str[i], (map.get(str[i]) || 0) +1);
+//     }
+//     return map;
+// }
+
+// var isAnagram = function(s, t) {
+//     if(createMap(s) === createMap(t)){
+//         return true;
+//     }
+//     return false;
+// };
+
+// above wont work bcz map are non primitive data types, stored by reference: two seperately created maps are never equal.
+
+// ---
+
 // ✅ Basic true cases
 console.log("simple true", isAnagram("anagram", "nagaram")); // true
 console.log("repeated chars", isAnagram("aabb", "bbaa"));   // true
