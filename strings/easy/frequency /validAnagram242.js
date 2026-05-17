@@ -1,6 +1,10 @@
 // Leetcode: 242: Valid Anagram.
 // Difficulty: Easy
 // Intuition: Hashmap - An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, using all the original letters exactly once.
+// Missed - 
+// 1. objects cant be compared like primitive data types.
+// 2. Freq calc can be done with Array(26) constructor pattern also.
+// 3. To get char's ASCII value, use str.charCodeAt(i)
 
 // Approach - Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 // 1. If lengths of 2 strings isnt equal, it is not an anagram.
