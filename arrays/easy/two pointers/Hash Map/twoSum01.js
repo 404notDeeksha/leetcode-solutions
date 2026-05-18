@@ -2,6 +2,9 @@
 // Difficulty: Easy
 // Implementation: HashMap + Two pointer
 
+// Missed - 
+// 1. Use map to put numbers with index
+
 // -----------------------------
 // Problem
 // - We have an integers array & a target integer.
