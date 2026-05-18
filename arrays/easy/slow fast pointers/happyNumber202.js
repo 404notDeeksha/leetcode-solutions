@@ -3,6 +3,10 @@
 // Category: Arrays
 // Approach - Floyd's Cycle Detection Algorithm (Slow and Fast Pointer)
 
+// Missed - 
+// 1. approach for slow - fast pointer
+// 2. fn to square digits
+
 // Problem:
 // Determine if given no. is a Happy Number
 // A happy number is positive & subsequent squares of its digits end in 1
