@@ -1,7 +1,7 @@
 // LeetCode 1346. Check If N and Its Double Exist
 // Difficulty: Easy
 // Category: Arrays
-// Approach: Sets
+// Approach: HashSet
 
 // Problem: Given an array of integers, we have to check if double of an array element exist in array.
 
@@ -16,6 +16,7 @@
 // - Time complexity:
 // - O(n) for the set
 // - O(1) for the set operations
+
 // - Space complexity:
 // - O(n) for the set
 
