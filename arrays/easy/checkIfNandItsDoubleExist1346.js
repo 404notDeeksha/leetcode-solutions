@@ -7,8 +7,9 @@
 
 // # Intiution
 // - Use a set to store the elements of the array
-// - Check if the double of the element exists in the set
-// - Check if the half of the element exists in the set
+// - For a certain elements -
+//    - Check if the double of the element exists in the set
+//    - Check if the half of the element exists in the set
 // - Return true if any of the above conditions are met
 // - Return false if none of the above conditions are met
 
