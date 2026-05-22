@@ -19,6 +19,8 @@
  * @param {number} k
  * @return {number}
  */
+// map is storing { sum: count of sum occurence as subarrays}
+
 var subarraySum = function(nums, k) {
     let count=0;
     let sum=0;
