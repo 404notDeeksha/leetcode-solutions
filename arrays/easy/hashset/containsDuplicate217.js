@@ -1,4 +1,4 @@
-// Leetcode 271: Contains Duplicates
+// Leetcode 217: Contains Duplicates
 /**
  * Approach: HashSet (Presence Check Technique)
  *
@@ -26,16 +26,16 @@
 
 // Code:
 
-var containsDuplicate = function(nums) {
-    let set = new Set();
-    for(let num of nums){
-        if(set.has(num)){
-            return true;
-        }else{
-            set.add(num);
-        }
+var containsDuplicate = function (nums) {
+  let set = new Set();
+  for (let num of nums) {
+    if (set.has(num)) {
+      return true;
+    } else {
+      set.add(num);
     }
-    return false;
+  }
+  return false;
 };
 
 console.log("Empty array:", containsDuplicate([])); // false
@@ -56,7 +56,10 @@ console.log("Negative numbers:", containsDuplicate([-1, -2, -3, -1])); // true
 
 console.log("Mixed positive & negative:", containsDuplicate([-1, 2, 3, -1, 4])); // true
 
-console.log("Large numbers:", containsDuplicate([100000, 200000, 300000, 100000])); // true
+console.log(
+  "Large numbers:",
+  containsDuplicate([100000, 200000, 300000, 100000])
+); // true
 
 // Another Approach: sorting : O(nlogn)- Time complexity
 // var containsDuplicate = function(nums) {
