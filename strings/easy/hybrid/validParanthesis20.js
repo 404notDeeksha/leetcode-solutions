@@ -27,7 +27,7 @@ var isValidParanthesis = function (s) {
             stack.push(s[i])
         } else {
             let top = stack.pop()
-            if (!top || (s[i] !=map[top]) ) {
+            if (!top || (s[i] !== map[top]) ) {
                 return false
             }
         }
