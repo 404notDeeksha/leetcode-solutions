@@ -1,3 +1,6 @@
+// New Approach + old Approach
+// Needs Revisit
+
 var findAnagrams = function(s, p) {
     let result = [];
     if(p.length > s.length) return result;
