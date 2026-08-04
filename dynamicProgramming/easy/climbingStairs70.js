@@ -1,7 +1,6 @@
-// Leetcode 70:
+// Leetcode 70: Climbing Stairs
 // Approach: Dynamic Programming (1D DP - Fibonacci pattern) using Tabulation (Bottom-Up), derived from Recursion + Memoization
 
-// Problem: LeetCode 70 - Climbing Stairs
 // Given n steps, you can climb either 1 or 2 steps at a time. Find the total number of distinct ways to reach the top.
 // Input: integer n (number of steps)
 // Output: integer (number of distinct ways)
@@ -22,12 +21,6 @@
 // Complexity:
 // Time Complexity: O(n)
 // Space Complexity: O(1)
-
-
-
-
-
-
 
 var climbStairs = function(n) {
     if (n <= 2) return n;

@@ -30,27 +30,49 @@
  */
 
 import { buildLinkedList, printLinkedList } from '../../utils/linkedList/utils';
-var deleteDuplicates = function(head) {
-    if(!head || !head.next) return head;
-    
-    let pos = head;
-    let curr = head.next;
 
-    while(curr){
-        while(curr && pos.val === curr.val){
-            curr=curr.next;
+// var deleteDuplicates = function(head) {
+//     if(!head || !head.next) return head;
+    
+//     let pos = head;
+//     let curr = head.next;
+
+//     while(curr){
+//         while(curr && pos.val === curr.val){
+//             curr=curr.next;
+//         }
+//         pos.next=curr;
+//         pos=curr;
+//         if(curr) curr=curr.next;
+//         }
+//     return head;
+// };
+
+// var deleteDuplicates = function (head) {
+//     if (!head || !head.next) return head
+//     head.next = deleteDuplicates(head.next)
+//     return head.val === head.next.val ? head.next : head
+// };
+
+var deleteDuplicates = function(head) {
+    let curr = head;
+    let currCopy=curr;
+
+    while(curr && curr.next){
+        if(curr.val < curr.next.val){
+            curr= curr.next;
+        }else{
+            curr.next = curr.next.next
         }
-        pos.next=curr;
-        pos=curr;
-        if(curr) curr=curr.next;
-        }
-    return head;
+    }
+    return currCopy;
 };
 
 let arr=[1,1,2,2,3,3,4];
 let head = buildLinkedList(arr);
 console.log("Original Linked List:");
 printLinkedList(head);
+
 let newHead = deleteDuplicates(head);
 console.log("Linked List after removing duplicates:");
 printLinkedList(newHead);
