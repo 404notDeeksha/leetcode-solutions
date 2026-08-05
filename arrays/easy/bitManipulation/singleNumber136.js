@@ -42,6 +42,23 @@ var singleNumber = function (nums) {
 // = 4 ^ 0 ^ 0
 // = 4
 
+// space complexity - O(n)
+
+var singleNumberOn = function(nums) {
+  if(nums.length === 1) return nums[0];
+
+  let map = new Map();
+  for(let i=0; i<nums.length ; i++){
+      if(map.has(nums[i])){
+          map.delete(nums[i]);
+      } else {
+      map.set(nums[i], (map.get(nums[i]) || 0) +1);}
+
+  }
+  return map.keys().next().value;
+};
+
+
 console.log("Single element:", singleNumber([7])); // 7
 
 console.log("Two elements (one pair + one single):", singleNumber([2, 2, 1])); // 1
